@@ -7,13 +7,13 @@ import {
   Switch,
   withRouter
 } from "react-router-dom"; 
-import Home from './components/Home';
-import About from './components/About';
-import Skills from './components/Skills';
-import Education from './components/Education';
-import Experience from './components/Experience';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
+import Home from './sections/Home';
+import About from './sections/About';
+import Skills from './sections/Skills';
+import Education from './sections/Education';
+import Experience from './sections/Experience';
+import Projects from './sections/Projects';
+import Contact from './sections/Contact';
 import './App.css';
 
 class Navigator extends Component {
