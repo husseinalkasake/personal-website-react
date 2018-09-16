@@ -1,3 +1,7 @@
+A **Work in Progress** Personal Portfolio Website built using ReactJS. Will be updated throughout development. 
+The develop branch contains the more recent work.
+A link to the final website will be posted once project is finished.
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
