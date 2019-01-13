@@ -5,20 +5,22 @@ import Text from '../components/Text';
 class About extends Component {
 
     render(){
-        var imageUrl = require(`../images/hussein-headshot-2.jpg`);
-        var imageStyle = {
-            height: window.innerHeight/1.5 + 'px',
-            left: window.innerWidth/1.5 + 'px',
-            top: window.innerHeight/12 + 'px',
-            position: 'absolute'
-        };
         return(
             <div style={{width: window.innerWidth + 'px'}} class='about-container'>
                 <Text fontfamily='Montserrat' section='about'/>
-                <img style={imageStyle} src={imageUrl}/>
+                <img style={this.imageStyle} src={this.imageUrl}/>
             </div>
         );
     }
+
+    imageUrl = require(`../images/hussein-headshot.jpg`);
+    imageStyle = {
+        display: 'flex',
+        'align-content': 'left',
+        height: window.innerHeight/1.5 + 'px',
+        left: window.innerWidth/1.5 + 'px',
+        top: window.innerHeight/12 + 'px',
+    };
 }
 
 export default About;

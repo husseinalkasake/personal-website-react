@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../App.css';
+import DetailCard from '../components/DetailCard';
 
 class Experience extends Component {
 
@@ -12,7 +13,7 @@ class Experience extends Component {
           };
         return(
             <div style={styles} class='experience-container'>
-                <p>Experience!!</p>
+                <DetailCard/>
             </div>
         );
     }
