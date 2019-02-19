@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/Education.css';
 
-class Contact extends Component {
+class Education extends Component {
 
     render(){
         var styles = {
@@ -11,11 +11,11 @@ class Contact extends Component {
             width: '100%', height: '100%', position: 'absolute'
           };
         return(
-            <div style={styles} class='contact-container'>
-                <p>Contact!!</p>
+            <div style={styles} className='education-container'>
+                <p>Education!!</p>
             </div>
         );
     }
 }
 
-export default Contact;
+export default Education;

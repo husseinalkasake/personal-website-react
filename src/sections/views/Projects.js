@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import '../App.css';
+import '../styles/Projects.css';
 
 class Projects extends Component {
 
@@ -11,7 +11,7 @@ class Projects extends Component {
             width: '100%', height: '100%', position: 'absolute'
           };
         return(
-            <div style={styles} class='projects-container'>
+            <div style={styles} className='projects-container'>
                 <p>Projects!!</p>
             </div>
         );

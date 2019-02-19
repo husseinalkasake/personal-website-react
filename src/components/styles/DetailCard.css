@@ -1,0 +1,15 @@
+    .detail-card {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: rgb(14, 8, 58);
+    }
+
+    .detail-card img {
+        background-color: rgb(14, 8, 58);
+    }
+
+    .detail-text {
+        color: grey;
+        font-weight: bold;
+        float: right;
+    }

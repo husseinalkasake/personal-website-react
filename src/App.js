@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './App.css';
+import './styles/App.css';
 import {
   BrowserRouter
 } from "react-router-dom"; 
-import Navigator from './Navigator';
+import Navigator from './sections/views/Navigator';
 
 class App extends Component {
   render() {
     return (
-      <div class='app-container'>
+      <div className='app-container'>
       <BrowserRouter>
         <Navigator/>
     </BrowserRouter>

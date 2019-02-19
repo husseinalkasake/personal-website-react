@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getText from '../models/TextModel';
+import getText from '../../models/TextModel';
 
 class Text extends Component{
 

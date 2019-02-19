@@ -1,0 +1,33 @@
+
+.app-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  background-color: black;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+@keyframes App-logo-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@font-face {
+  font-family: 'GreatDay';
+  src: local('GreatDay'), url('./fonts/Great-Day-Personal-Use.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'TypoGrapahica';
+  src: local('TypoGrapahica'), url('./fonts/TypoGraphica.otf') format('opentype');
+}
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
