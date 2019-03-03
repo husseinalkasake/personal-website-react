@@ -11,8 +11,11 @@ class Experience extends Component {
         };
         return(
             <div className='experience-container' styles={ cardContainer }>
-                <div className='card-container'>
-                    <DetailCard/>
+                <div>
+                    <DetailCard section='experience' key='0'/>
+                    <DetailCard section='experience' key='1'/>
+                    <DetailCard section='experience' key='2'/>
+                    <DetailCard section='experience' key='3'/>
                 </div>
             </div>
         );

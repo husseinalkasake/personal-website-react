@@ -1,20 +1,32 @@
 import React, { Component } from 'react';
+import '../../styles/App.css';
 import getText from '../../models/TextModel';
 
 class Text extends Component{
 
     render(){
-        var styles = {};
+        let styles = {};
         switch(this.props.section){
             case 'about':
                 styles  = {
-                    'text-align': 'left',
-                    'font-size': '14px',
-                    width: window.innerWidth/2.2 + 'px',
-                    'font-family': this.props.fontfamily
+                    fontSize: '14px',
+                    textAlign: 'left',
+                    fontFamily: this.props.fontfamily,
+                    width: window.innerWidth/2.2 + 'px'
+                };
+            case 'experience':
+                styles = {
+                    fontSize: '14px',
+                    textAlign: 'left',
+                    fontFamily: this.props.fontfamily,
+                    width: window.innerWidth/2.2 + 'px'
                 };
         }
-        return(<p style={styles}>{getText(this.props.section)}</p>);
+        return(
+            <div class="pr24">
+                { getText(this.props.section, styles, this.props.key) }
+            </div>
+        );
     }
 }
 

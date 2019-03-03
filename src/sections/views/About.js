@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../styles/About.css';
+// import Image from 'react-image-resizer';
 import Text from '../../components/views/Text';
+import getImage from '../../models/ImageModel';
 
 class About extends Component {
 
@@ -8,12 +10,11 @@ class About extends Component {
         return(
             <div style={{width: window.innerWidth + 'px'}} className='about-container'>
                 <Text fontfamily='Montserrat' section='about'/>
-                <img className="headshot-img" style={this.imageStyle} src={this.imageUrl}/>
+                <img className="headshot-img" style={this.imageStyle} src={ getImage('about') }/>
             </div>
         );
     }
 
-    imageUrl = require(`../../images/hussein-headshot.jpg`);
     imageStyle = {
         height: window.innerHeight/1.5 + 'px',
         left: window.innerWidth/1.5 + 'px',

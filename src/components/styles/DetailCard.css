@@ -1,15 +1,24 @@
     .detail-card {
         display: flex;
-        flex-direction: row-reverse;
-        background-color: rgb(14, 8, 58);
+        flex-direction: row;
+        min-width: 50rem;
+        min-height: 15rem;
+        margin-top: 24px;
+        margin-bottom: 24px;
+        border-radius: 25px;
+        background-color: rgb(18, 33, 43);
+    }
+
+    .image-container {
+        max-width: 600px;
+        padding-left: 24px;
     }
 
     .detail-card img {
-        background-color: rgb(14, 8, 58);
+        background-color: inherit;
     }
 
     .detail-text {
-        color: grey;
         font-weight: bold;
-        float: right;
+        color: rgb(148, 148, 148);
     }

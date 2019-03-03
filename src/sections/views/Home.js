@@ -6,7 +6,7 @@ class Home extends Component {
 
     render(){
         var homeStyle = {
-            width: window.innerWidth + 'px', 
+            width: window.innerWidth + 'px',
             height: window.innerHeight + 'px'
         };
         var containerStyle = {

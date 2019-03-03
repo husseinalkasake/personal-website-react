@@ -6,6 +6,9 @@
       align-content: center;
       font-family: 'Montserrat';
       font-weight: bold;
+      position: sticky;
+      top: 0px;
+      background-color: black;
   }
 
   .home-link {
