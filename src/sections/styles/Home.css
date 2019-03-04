@@ -2,7 +2,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background-color: url("../../images/hussein-wideshot-cropped.jpg");
     }
 
     .home-container p {

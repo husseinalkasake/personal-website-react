@@ -12,9 +12,9 @@ class NavHeader extends Component {
                 </Link>
                 <Link className='link' to='/about'>About</Link>
                 <Link className='link' to='/experience'>Experience</Link>
-                <Link className='link' to='/education'>Education</Link>
                 <Link className='link' to='/projects'>Projects</Link>
-                <Link className='link' to='/contact'>Contact</Link>
+                <Link className='link' to='/education'>Education</Link>
+                <Link className='link' to='/contact'>Contact</Link> 
             </div>
         );
     }

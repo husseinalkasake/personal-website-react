@@ -23,8 +23,8 @@ class Text extends Component{
                 };
         }
         return(
-            <div class="pr24">
-                { getText(this.props.section, styles, this.props.key) }
+            <div className="pr24">
+                { getText(this.props.section, styles, this.props.importKey) }
             </div>
         );
     }

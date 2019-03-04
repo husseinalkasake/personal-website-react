@@ -10,7 +10,7 @@ class About extends Component {
         return(
             <div style={{width: window.innerWidth + 'px'}} className='about-container'>
                 <Text fontfamily='Montserrat' section='about'/>
-                <img className="headshot-img" style={this.imageStyle} src={ getImage('about') }/>
+                <img className="headshot-img" style={this.imageStyle} src={ getImage('about')}/>
             </div>
         );
     }

@@ -1,13 +1,15 @@
 import React, { Component } from 'react';
 import '../styles/Home.css';
 import LogosCard from '../../components/views/LogosCard';
+import getImage from '../../models/ImageModel';
 
 class Home extends Component {
 
     render(){
         var homeStyle = {
             width: window.innerWidth + 'px',
-            height: window.innerHeight + 'px'
+            height: window.innerHeight + 'px',
+            backgroundImage: getImage('home')
         };
         var containerStyle = {
             top: window.innerHeight/4 + 'px',

@@ -9,10 +9,10 @@ class DetailCard extends Component {
         return(
             <div className="detail-card">
                 <div className="image-container">
-                    <Image src={`${ getImage(this.props.section, this.props.key) }`} height="200" width="400"/>
+                    <Image src={`${ getImage(this.props.section, this.props.importKey) }`} height={window.innerHeight / 5} width={window.innerWidth / 5}/>
                 </div>
                 <div className="detail-text">
-                    <Text fontfamily='Montserrat' section={this.props.section} key={this.props.key}/>
+                    <Text fontfamily='Montserrat' section={this.props.section} importKey={this.props.importKey}/>
                 </div>
             </div>
         );

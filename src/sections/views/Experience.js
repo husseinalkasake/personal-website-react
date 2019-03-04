@@ -12,10 +12,10 @@ class Experience extends Component {
         return(
             <div className='experience-container' styles={ cardContainer }>
                 <div>
-                    <DetailCard section='experience' key='0'/>
-                    <DetailCard section='experience' key='1'/>
-                    <DetailCard section='experience' key='2'/>
-                    <DetailCard section='experience' key='3'/>
+                    <DetailCard section='experience' importKey={0}/>
+                    <DetailCard section='experience' importKey={1}/>
+                    <DetailCard section='experience' importKey={2}/>
+                    <DetailCard section='experience' importKey={3}/>
                 </div>
             </div>
         );

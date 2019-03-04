@@ -1,12 +1,16 @@
 const ImageModel = {
-    about: '../../images/hussein-headshot.jpg',
-    experience: ['../images/globalive_logo.png', '', '', '']
+    home: require('../images/hussein-widepic.jpg'),
+    about: require('../images/hussein-headshot.jpg'),
+    experience: [require('../images/globalive_logo.png'), '', '', '']
 };
 
 const getImage = (section, key = 0) => {
 
     let image = '';
     switch(section){
+        case 'home':
+            image = ImageModel.home;
+            break;
         case 'about':
             image = ImageModel.about;
             break;
@@ -16,7 +20,7 @@ const getImage = (section, key = 0) => {
         default:
             break;
     }
-    return image; // !== '' ? require(`${ image }`) : image;
+    return image;
 }
 
 export default getImage;

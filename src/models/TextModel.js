@@ -15,28 +15,47 @@ const TextModel = {
             title: "Software Developer (Frontend)",
             date: "Jan - April 2019",
             duration: "(4 Months)",
-            summary: []
+            summary: [
+                "Test",
+                "Test"
+            ]
         },
         1: {
             organization: "Multi-Health Systems",
             title: "Software Developer (Web)",
             date: "May - August 2018",
             duration: "(4 Months)",
-            summary: []
+            summary: [
+                "Developed a progressive web app for a business teamwork simulation using React & NodeJS",
+                "Ensured an emphasis on component-based development so the app can be used as a template for future web applications",
+                "Used React Router and Redux libraries to handle app navigation and state management respectively"
+            ]
         },
         2: {
             organization: "Multi-Health Systems",
             title: "Software Developer (.NET)",
             date: "Sep 2016 - December 2017",
             duration: "(12 Months)",
-            summary: []
+            summary: [
+                "Created a Windows 8 &10 UWP/Metro application for a language learning child assessment using C#, .NET & Xamarin Forms, and shipped app to Microsoft Store to be used by company clients",
+                "Communicated with company portal APIs using JSON and XML data",
+                "Fixed hundreds of bugs and worked on new user stories within a timely manner in an Agile/Scrum environment; participated in daily standups and sprint planning sessions",
+                "Completed an update to an existing iOS application, 4 weeks ahead of schedule, by adding new screens and calculating new data",
+                "Developed a cross-platform template for future assessment Windows and mobile applications from existing code",
+                "Managed multiple projects within a fast-paced environment; tracked workflow using TFS and Git repositories"
+            ]
         },
-        0: {
+        3: {
             organization: "Trans-Plan Inc.",
             title: "Software Developer (iOS)",
             date: "Jan - April 2016",
             duration: "(4 Months)",
-            summary: []
+            summary: [
+                "Developed native iOS traffic analysis application for traffic count surveys using Objective C.",
+                "Added new traffic count speed control feature to existing iOS traffic count app that wirelessly syncs with Windows VLC media player.",
+                "Updated existing company applications with requested interface features by co-workers and traffic surveyors.",
+                "Resolved app bugs that occurred to traffic surveyors during active studies to ensure all collected site data can be obtained and uploaded to company server as soon as possible."
+            ]
         },
     }
 };
@@ -56,8 +75,10 @@ const getText = (section, styles = {}, key = 0) => {
             texts.push(<p style={styles}>{ position.title}</p>);
             texts.push(<p style={styles}>{ position.date}</p>);
             texts.push(<p style={styles}>{ position.duration}</p>);
+            let list = [];
             for (let text of position.summary)
-                texts.push(<p style={styles}>{ text }</p>);
+                list.push(<li style={styles}>{ text }</li>);
+            texts.push(<ul>{ list }</ul>);
             break;
         default:
             break;

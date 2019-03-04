@@ -1,9 +1,10 @@
     .detail-card {
         display: flex;
         flex-direction: row;
-        min-width: 50rem;
-        min-height: 15rem;
+        min-width: 65rem;
+        min-height: 25rem;
         margin-top: 24px;
+        align-content: center;
         margin-bottom: 24px;
         border-radius: 25px;
         background-color: rgb(18, 33, 43);
@@ -12,6 +13,10 @@
     .image-container {
         max-width: 600px;
         padding-left: 24px;
+        float: left;
+        padding-right: 24px;
+        vertical-align: center;
+        position: relative;
     }
 
     .detail-card img {
@@ -20,5 +25,6 @@
 
     .detail-text {
         font-weight: bold;
+        float: right;
         color: rgb(148, 148, 148);
     }
