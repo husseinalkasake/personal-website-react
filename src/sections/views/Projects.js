@@ -1,18 +1,22 @@
 import React, { Component } from 'react';
 import '../styles/Projects.css';
+import DetailCard from '../../components/views/DetailCard';
 
 class Projects extends Component {
 
     render(){
-        var styles = {
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex',
-            width: '100%', height: '100%', position: 'absolute'
-          };
+        var cardContainer = {
+            position: 'absolute',
+            bottom: window.innerHeight / 4 + 'px'
+        };
         return(
-            <div style={styles} className='projects-container'>
-                <p>Projects!!</p>
+            <div className='projects-container' styles={ cardContainer }>
+                <div>
+                    <DetailCard section='projects' importKey={0}/>
+                    <DetailCard section='projects' importKey={0}/>
+                    <DetailCard section='projects' importKey={0}/>
+                    <DetailCard section='projects' importKey={0}/>
+                </div>
             </div>
         );
     }

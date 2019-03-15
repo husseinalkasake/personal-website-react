@@ -14,13 +14,14 @@ import Projects from './Projects';
 import Contact from './Contact';
 import NavHeader from '../../components/views/NavHeader';
 import '../styles/Navigator.css';
+import Skills from './Skills';
 
 class Navigator extends Component {
 
     render(){
         return(
             <Router>
-                <div className='nav-container' style={{'background-color': 'black'}}>
+                <div className='nav-container' style={{backgroundColor: 'black'}}>
                     <NavHeader/>
                     <div className='nav-body'>
                         <Switch>
@@ -31,6 +32,7 @@ class Navigator extends Component {
                             <Route path='/education' render={()=> <Education/>}/>
                             <Route path='/projects' render={()=> <Projects/>}/>
                             <Route path='/contact' render={()=> <Contact/>}/>
+                            <Route path='/skills' render={()=> <Skills/>}/>
                         </Switch>
                     </div>
                 </div>

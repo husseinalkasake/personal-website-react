@@ -1,8 +1,6 @@
     .detail-card {
         display: flex;
         flex-direction: row;
-        min-width: 65rem;
-        min-height: 25rem;
         margin-top: 24px;
         align-content: center;
         margin-bottom: 24px;
@@ -16,7 +14,6 @@
         float: left;
         padding-right: 24px;
         vertical-align: center;
-        position: relative;
     }
 
     .detail-card img {

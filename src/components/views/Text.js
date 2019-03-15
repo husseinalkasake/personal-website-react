@@ -12,15 +12,33 @@ class Text extends Component{
                     fontSize: '14px',
                     textAlign: 'left',
                     fontFamily: this.props.fontfamily,
-                    width: window.innerWidth/2.2 + 'px'
+                    maxWidth: window.innerWidth/2 + 'px'
                 };
+                break;
             case 'experience':
                 styles = {
                     fontSize: '14px',
                     textAlign: 'left',
                     fontFamily: this.props.fontfamily,
-                    width: window.innerWidth/2.2 + 'px'
+                    maxWidth: window.innerWidth/2 + 'px'
                 };
+                break;
+            case 'projects':
+                styles = {
+                    fontSize: '14px',
+                    textAlign: 'left',
+                    fontFamily: this.props.fontfamily,
+                    width: window.innerWidth/2 + 'px'
+                };
+                break;
+            case 'education':
+                styles = {
+                    fontSize: '14px',
+                    textAlign: 'left',
+                    fontFamily: this.props.fontfamily,
+                    width: window.innerWidth/2 + 'px'
+                };
+                break;
         }
         return(
             <div className="pr24">

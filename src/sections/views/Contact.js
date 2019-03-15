@@ -4,15 +4,12 @@ import '../styles/Contact.css';
 class Contact extends Component {
 
     render(){
-        var styles = {
-            justifyContent: 'center',
-            alignItems: 'center',
-            display: 'flex',
-            width: '100%', height: '100%', position: 'absolute'
-          };
+        var cardContainer = {
+            position: 'absolute',
+            bottom: window.innerHeight / 4 + 'px'
+        };
         return(
-            <div style={styles} className='contact-container'>
-                <p>Contact!!</p>
+            <div className='contact-container' styles={ cardContainer }>
             </div>
         );
     }

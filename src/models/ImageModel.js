@@ -1,7 +1,11 @@
 const ImageModel = {
     home: require('../images/hussein-widepic.jpg'),
     about: require('../images/hussein-headshot.jpg'),
-    experience: [require('../images/globalive_logo.png'), '', '', '']
+    experience: [ require('../images/globalive_logo.png'),
+                  require('../images/mhs-logo.png'),
+                  require('../images/mhs-logo.png'),
+                  require('../images/trans-plan-logo.png')
+                ]
 };
 
 const getImage = (section, key = 0) => {

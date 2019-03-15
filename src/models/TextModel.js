@@ -9,8 +9,8 @@ const TextModel = {
                     "While I'm not working on work or side projects, I really enjoy working on my music production as it remains to be my main creative outlet nowadays. I make countless hip-hop/P8B/electronic beats as I always obsess over new synths, plug-ins and sounds I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever f ilms/albums that I might've missed during the year."
                 ]
     },
-    experience: {
-        0: {
+    experience: [
+        {
             organization: "Globalive Technology",
             title: "Software Developer (Frontend)",
             date: "Jan - April 2019",
@@ -20,7 +20,7 @@ const TextModel = {
                 "Test"
             ]
         },
-        1: {
+        {
             organization: "Multi-Health Systems",
             title: "Software Developer (Web)",
             date: "May - August 2018",
@@ -31,7 +31,7 @@ const TextModel = {
                 "Used React Router and Redux libraries to handle app navigation and state management respectively"
             ]
         },
-        2: {
+        {
             organization: "Multi-Health Systems",
             title: "Software Developer (.NET)",
             date: "Sep 2016 - December 2017",
@@ -45,7 +45,7 @@ const TextModel = {
                 "Managed multiple projects within a fast-paced environment; tracked workflow using TFS and Git repositories"
             ]
         },
-        3: {
+        {
             organization: "Trans-Plan Inc.",
             title: "Software Developer (iOS)",
             date: "Jan - April 2016",
@@ -56,13 +56,47 @@ const TextModel = {
                 "Updated existing company applications with requested interface features by co-workers and traffic surveyors.",
                 "Resolved app bugs that occurred to traffic surveyors during active studies to ensure all collected site data can be obtained and uploaded to company server as soon as possible."
             ]
+        }
+    ],
+    projects: [{
+            organization: "Personal",
+            title: "Personal Website",
+            summary: [
+                "Temp",
+                "Temp",
+                "Temp"
+            ]
+        }
+    ],
+    education: [{
+            institution: "University of Waterloo",
+            title: "Mechatronics Engineering",
+            date: "Expected Graduation: 2021",
+            subtitle: 'Relevant Courses',
+            summary: [
+                "Temp",
+                "Temp",
+                "Temp"
+            ]             
         },
-    }
+        {
+            institution: "Bluevale Collegiate Institute",
+            title: "Highschool",
+            date: "Graduation: 2015",
+            subtitle: 'Relevant Courses',
+            summary: [
+                "Temp",
+                "Temp",
+                "Temp"
+            ]
+        }
+    ]
 };
 
 const getText = (section, styles = {}, key = 0) => {
 
     let texts = [];
+    let list = [];
     switch(section){
         case 'about':
             texts.push(<p style={styles}>{ TextModel.about.header}</p>);
@@ -75,8 +109,27 @@ const getText = (section, styles = {}, key = 0) => {
             texts.push(<p style={styles}>{ position.title}</p>);
             texts.push(<p style={styles}>{ position.date}</p>);
             texts.push(<p style={styles}>{ position.duration}</p>);
-            let list = [];
+            list = [];
             for (let text of position.summary)
+                list.push(<li style={styles}>{ text }</li>);
+            texts.push(<ul>{ list }</ul>);
+            break;
+        case 'projects':
+            const project = TextModel.projects[key];
+            texts.push(<p style={styles}>{ project.organization}</p>);
+            texts.push(<p style={styles}>{ project.title}</p>);
+            list = [];
+            for (let text of project.summary)
+                list.push(<li style={styles}>{ text }</li>);
+            texts.push(<ul>{ list }</ul>);
+            break;
+        case 'education':
+            const institution = TextModel.education[key];
+            texts.push(<p style={styles}>{ institution.institution}</p>);
+            texts.push(<p style={styles}>{ institution.title}</p>);
+            texts.push(<p style={styles}>{ institution.date}</p>);
+            texts.push(<p style={styles}>{ institution.subtitle}</p>);
+            for (let text of institution.summary)
                 list.push(<li style={styles}>{ text }</li>);
             texts.push(<ul>{ list }</ul>);
             break;
