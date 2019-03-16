@@ -6,22 +6,15 @@ import getImage from '../../models/ImageModel';
 class Home extends Component {
 
     render(){
-        var homeStyle = {
-            width: window.innerWidth + 'px',
-            height: window.innerHeight + 'px',
-            backgroundImage: getImage('home')
-        };
-        var containerStyle = {
-            top: window.innerHeight/4 + 'px',
+        var styles = {
+            height: window.innerHeight / 1.2 + 'px'
         };
         return(
-            <div className='home-container' style={homeStyle}>
-                <div style={{justifyContent: 'center'}}>
-                    <div style={containerStyle}>
-                        <p>Software Developer</p>
-                        <p>MECHATRONICS ENGINEERING</p>
-                        <LogosCard/>
-                    </div>
+            <div className='home-container' style={styles}>
+                <div className="text-container">
+                    <p>Software Developer</p>
+                    <p>MECHATRONICS ENGINEERING</p>
+                    <LogosCard/>
                 </div>
             </div>
         );

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
 import '../styles/NavHeader.css';
+import Image from 'react-image-resizer';
 
 class NavHeader extends Component {
 
@@ -9,6 +10,7 @@ class NavHeader extends Component {
             <div className='nav-header'>
                 <Link className='link' to='/home'>
                     <a className="home-link">Hussein Alkasake</a>
+                    {/* <img src={require('../../images/hussein-alkasake.png')} width="0.8em" height="0.8em"/> */}
                 </Link>
                 <Link className='link' to='/about'>About</Link>
                 <Link className='link' to='/experience'>Experience</Link>

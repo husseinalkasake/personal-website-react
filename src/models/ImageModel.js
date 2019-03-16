@@ -13,6 +13,7 @@ const getImage = (section, key = 0) => {
     let image = '';
     switch(section){
         case 'home':
+        debugger
             image = ImageModel.home;
             break;
         case 'about':
