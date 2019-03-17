@@ -6,11 +6,8 @@ import getImage from '../../models/ImageModel';
 class Home extends Component {
 
     render(){
-        var styles = {
-            height: window.innerHeight / 1.2 + 'px'
-        };
         return(
-            <div className='home-container' style={styles}>
+            <div className='home-container' style={this.dynamicSize()}>
                 <div className="text-container">
                     <p>Software Developer</p>
                     <p>MECHATRONICS ENGINEERING</p>
@@ -18,6 +15,9 @@ class Home extends Component {
                 </div>
             </div>
         );
+    }
+    dynamicSize () {
+        return { flexDirection: (window.innerWidth <= 640 ? 'column-reverse' : 'row') };
     }
 }
 

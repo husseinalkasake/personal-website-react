@@ -24,22 +24,16 @@ class DetailCard extends Component {
         return window.innerWidth / 5;
     }
     dynamicStyle () {
-        let styles = {};
+        let height = '15em';
+        let flex = window.innerWidth <= 640 ? 'column' : 'row';
         switch (this.props.section) {
-            case 'projects':
-                styles = {
-                    height: window.innerHeight/2 + 'px'
-                };
-                break;
             case 'education':
-                styles = {
-                    height: window.innerHeight/2 + 'px'
-                };
+                height = '20em';
                 break;
             default:
                 break;
         }
-        return styles;
+        return { minHeight: height, flexDirection: flex };
     }
 }
 

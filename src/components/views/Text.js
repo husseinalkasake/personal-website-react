@@ -9,32 +9,32 @@ class Text extends Component{
         switch(this.props.section){
             case 'about':
                 styles  = {
-                    fontSize: '14px',
                     textAlign: 'left',
+                    fontSize: '0.88em',
                     fontFamily: this.props.fontfamily,
                     maxWidth: window.innerWidth/2 + 'px'
                 };
                 break;
             case 'experience':
                 styles = {
-                    fontSize: '14px',
                     textAlign: 'left',
+                    fontSize: '0.88em',
                     fontFamily: this.props.fontfamily,
                     maxWidth: window.innerWidth/2 + 'px'
                 };
                 break;
             case 'projects':
                 styles = {
-                    fontSize: '14px',
                     textAlign: 'left',
+                    fontSize: '0.88em',
                     fontFamily: this.props.fontfamily,
                     width: window.innerWidth/2 + 'px'
                 };
                 break;
             case 'education':
                 styles = {
-                    fontSize: '14px',
                     textAlign: 'left',
+                    fontSize: '0.88em',
                     fontFamily: this.props.fontfamily,
                     width: window.innerWidth/2 + 'px'
                 };

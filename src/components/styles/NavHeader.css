@@ -14,9 +14,10 @@
 
   .home-link {
       font-family: 'GreatDay';
-      font-weight: normal;
+      font-weight: 500;
       font-size: 2.5em;
-      color: red;
+      /* color: #8dabd9; */
+      color: #6f8ebf;
   }
 
   .link {
@@ -30,7 +31,8 @@
     }
     
   .link:hover{
-    color: #da44a8;
+    /* color: #da44a8; */
+      color: #6f8ebf;
   }
 
   div a {
