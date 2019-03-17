@@ -25,7 +25,6 @@ class Navigator extends Component {
                     <NavHeader/>
                     <div className='nav-body'>
                         <Switch>
-                            <Route exact path='/' render={()=> <Redirect path from='/' to='/home'/>}/>
                             <Route path='/home' render={()=> <Home/>}/>
                             <Route path='/about' render={()=> <About/>}/>
                             <Route path='/experience' render={()=> <Experience/>}/>
@@ -33,6 +32,7 @@ class Navigator extends Component {
                             <Route path='/projects' render={()=> <Projects/>}/>
                             <Route path='/contact' render={()=> <Contact/>}/>
                             <Route path='/skills' render={()=> <Skills/>}/>
+                            <Route render={()=> <Redirect to='/home'/>}/>
                         </Switch>
                     </div>
                 </div>

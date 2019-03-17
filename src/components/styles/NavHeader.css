@@ -10,12 +10,13 @@
       z-index: 1;
       top: 0px;
       background-color: black;
+      /* background-color: #282828; */
   }
 
   .home-link {
       font-family: 'GreatDay';
       font-weight: 500;
-      font-size: 2.5em;
+      /* font-size: 2.5em; */
       /* color: #8dabd9; */
       color: #6f8ebf;
   }

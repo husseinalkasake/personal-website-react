@@ -5,10 +5,13 @@ import '../styles/NavHeader.css';
 class NavHeader extends Component {
 
     render(){
+        let homeLink = {
+            fontSize: window.innerWidth <= 900 ? '1em' : '2.25em'
+        }
         return(
             <div className='nav-header'>
                 <Link className='link' to='/home'>
-                    <a className="home-link">Hussein Alkasake</a>
+                    <a className="home-link" style={homeLink}>Hussein Alkasake</a>
                 </Link>
                 <Link className='link' to='/about'>About</Link>
                 <Link className='link' to='/experience'>Experience</Link>
