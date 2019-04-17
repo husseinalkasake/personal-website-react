@@ -13,9 +13,9 @@ class Projects extends Component {
             <div className='projects-container' styles={ cardContainer }>
                 <div>
                     <DetailCard section='projects' importKey={0}/>
-                    <DetailCard section='projects' importKey={0}/>
-                    <DetailCard section='projects' importKey={0}/>
-                    <DetailCard section='projects' importKey={0}/>
+                    <DetailCard section='projects' importKey={1}/>
+                    <DetailCard section='projects' importKey={2}/>
+                    <DetailCard section='projects' importKey={3}/>
                 </div>
             </div>
         );
