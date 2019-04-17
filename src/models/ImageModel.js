@@ -1,11 +1,16 @@
 const ImageModel = {
     home: require('../images/hussein-widepic.jpg'),
     about: require('../images/hussein-headshot.jpg'),
-    experience: [ require('../images/globalive_logo.png'),
-                  require('../images/mhs-logo.png'),
-                  require('../images/mhs-logo.png'),
-                  require('../images/trans-plan-logo.png')
-                ]
+    experience: [ 
+        require('../images/globalive_logo.png'),
+        require('../images/mhs-logo.png'),
+        require('../images/mhs-logo.png'),
+        require('../images/trans-plan-logo.png')
+    ],
+    education: [
+        require('../images/uw-logo.png'),
+        require('../images/bluevale-logo.png')
+    ]
 };
 
 const getImage = (section, key = 0) => {
@@ -21,6 +26,9 @@ const getImage = (section, key = 0) => {
             break;
         case 'experience':
             image = ImageModel.experience[key];
+            break;
+        case 'education':
+            image = ImageModel.education[key];
             break;
         default:
             break;

@@ -18,7 +18,12 @@ class DetailCard extends Component {
         );
     }
     dynamicImageHeight () {
-        return window.innerHeight / 5;
+        switch(this.props.section) {
+            case 'education':
+                return window.innerHeight / 3;
+            default:
+                return window.innerHeight / 5;
+        }
     }
     dynamicImageWidth () {
         return window.innerWidth / 5;

@@ -63,11 +63,37 @@ const TextModel = {
     ],
     projects: [{
             organization: "Personal",
-            title: "Personal Website",
+            title: "Endless Charts",
+            subtitle: "Album Chart Mobile Application - WORK IN PROGRESS",
             summary: [
-                "Temp",
-                "Temp",
-                "Temp"
+                "Cross-platform mobile application currently building for Android using React Native",
+                "Supports the ability to search for albums, view details, choose favorites and create simple lists",
+                "Uses React Router for navigation and Axios for REST API calls; Last.fm API used to populate app data",
+                "Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management"
+            ]
+        },{
+            organization: "Personal",
+            title: "Personal Portfolio Website",
+            summary: [
+                "probably where you're reading this right now :)",
+                "Simple Personal Portfolio Website to highlight personal skills and experience",
+                "Front-end based web app built using ReactJS to create clean, reusable components",
+                "Dynamically scale images and cards and use flexbox to ensure responsive design"
+            ]
+        },{
+            organization: "School",
+            title: "NXT Coin Sorter",
+            summary: [
+                "Worked as a team to design, build and code a Coin Sorting robot using a Lego Mindstorm kit",
+                "Build the mechanical design to turn circular motion of a motor to linear motion, pushing each coin towards a touch sensor to measure their diameters",
+                "Completed, tested and debugged the C++ code to operate the mechanical system efficiently"
+            ]
+        },{
+            organization: "School",
+            title: "Fuel Cell Car",
+            summary: [
+                "Maintained Hydrogen fuel cell equipment provided by the university to develop a line following car that could travel through three different courses",
+                "Completed a RobotC line following algorithm and tested it on each course to optimize the left and right bias of the code"
             ]
         }
     ],
@@ -76,24 +102,38 @@ const TextModel = {
             title: "Candidate for Bachelors of Applied Science in Mechatronics Engineering",
             location: "Waterloo, Ontario, Canada",
             date: "Expected Graduation: 2021",
-            subtitle: 'Relevant Projects',
-            summary: [
-                "Temp",
-                "Temp",
-                "Temp"
-            ]             
+            sections: [{
+                subtitle: 'Relevant Projects',
+                summary: [
+                    "Built a basic task scheduling real-time operating system using C and RTOS course material",
+                    "Built and programmed a line following and magnet detecting robot using C and soldering skills",
+                    "Designed, tested and debugged line following and coin sorting robots using C++ to meet constraints and fulfill project goals",
+                    "Designed and built a 3D Truss Bridge Design using stress and force analysis and AutoCAD skills"
+                ]
+            },{
+                subtitle: 'Relevant Courses',
+                summary: [
+                    "General Computation",
+                    "Linear Systems & Signals",
+                    "Calculus 1/2/3 for Engineers",
+                    "Microprocessors Digital Logic",
+                    "Algorithms and Data Structures",
+                    "Computer Structures & Real-Time Systems"
+                ]
+            }]    
         },
         {
             institution: "Bluevale Collegiate Institute",
             title: "Ontario Secondary School Diploma",
             location: "Waterloo, Ontario, Canada",
             date: "Graduation: 2015",
-            subtitle: 'Relevant Projects',
-            summary: [
-                "Temp",
-                "Temp",
-                "Temp"
-            ]
+            sections: [{
+                subtitle: 'Relevant Courses/Projects',
+                summary: [
+                    "AP Calculus",
+                    "Determined factors that affect the crime rate in Canada in a 30-page statistics research report, using analytical and Microsoft Excel skills."
+                ]
+            }]
         }
     ]
 };
@@ -115,17 +155,20 @@ const getText = (section, styles = {}, key = 0) => {
             texts.push(<p style={styles}>{ position.date}</p>);
             texts.push(<p style={styles}>{ position.location}</p>);
             list = [];
-            for (let text of position.summary)
+            position.summary.map(text => {
                 list.push(<li style={styles}>{ text }</li>);
+            });
             texts.push(<ul>{ list }</ul>);
             break;
         case 'projects':
             const project = TextModel.projects[key];
             texts.push(<p style={styles}>{ project.organization}</p>);
             texts.push(<p style={styles}>{ project.title}</p>);
+            if (project.subtitle) texts.push(<p style={styles}>{ project.subtitle}</p>);
             list = [];
-            for (let text of project.summary)
+            project.summary.map(text => {
                 list.push(<li style={styles}>{ text }</li>);
+            });
             texts.push(<ul>{ list }</ul>);
             break;
         case 'education':
@@ -134,10 +177,14 @@ const getText = (section, styles = {}, key = 0) => {
             texts.push(<p style={styles}>{ institution.title}</p>);
             texts.push(<p style={styles}>{ institution.location}</p>);
             texts.push(<p style={styles}>{ institution.date}</p>);
-            texts.push(<p style={styles}>{ institution.subtitle}</p>);
-            for (let text of institution.summary)
-                list.push(<li style={styles}>{ text }</li>);
-            texts.push(<ul>{ list }</ul>);
+            institution.sections.map(section => {
+                texts.push(<p style={styles}>{ section.subtitle}</p>);
+                list = [];
+                section.summary.map(text => {
+                    list.push(<li style={styles}>{ text }</li>);
+                });
+                texts.push(<ul>{ list }</ul>);
+            });
             break;
         default:
             break;
