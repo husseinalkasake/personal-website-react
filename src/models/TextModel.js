@@ -62,9 +62,9 @@ const TextModel = {
         }
     ],
     projects: [{
-            organization: "Personal",
             title: "Endless Charts",
             subtitle: "Album Chart Mobile Application - WORK IN PROGRESS",
+            date: "2019",
             summary: [
                 "Cross-platform mobile application currently building for Android using React Native",
                 "Supports the ability to search for albums, view details, choose favorites and create simple lists",
@@ -72,25 +72,25 @@ const TextModel = {
                 "Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management"
             ]
         },{
-            organization: "Personal",
             title: "Personal Portfolio Website",
+            subtitle: "probably where you're reading this right now :)",
+            date: "2018 - 2019",
             summary: [
-                "probably where you're reading this right now :)",
                 "Simple Personal Portfolio Website to highlight personal skills and experience",
                 "Front-end based web app built using ReactJS to create clean, reusable components",
                 "Dynamically scale images and cards and use flexbox to ensure responsive design"
             ]
         },{
-            organization: "School",
             title: "NXT Coin Sorter",
+            date: "2016",
             summary: [
                 "Worked as a team to design, build and code a Coin Sorting robot using a Lego Mindstorm kit",
                 "Build the mechanical design to turn circular motion of a motor to linear motion, pushing each coin towards a touch sensor to measure their diameters",
                 "Completed, tested and debugged the C++ code to operate the mechanical system efficiently"
             ]
         },{
-            organization: "School",
             title: "Fuel Cell Car",
+            date: "2016",
             summary: [
                 "Maintained Hydrogen fuel cell equipment provided by the university to develop a line following car that could travel through three different courses",
                 "Completed a RobotC line following algorithm and tested it on each course to optimize the left and right bias of the code"
@@ -162,7 +162,6 @@ const getText = (section, styles = {}, key = 0) => {
             break;
         case 'projects':
             const project = TextModel.projects[key];
-            texts.push(<p style={styles}>{ project.organization}</p>);
             texts.push(<p style={styles}>{ project.title}</p>);
             if (project.subtitle) texts.push(<p style={styles}>{ project.subtitle}</p>);
             list = [];
@@ -192,4 +191,7 @@ const getText = (section, styles = {}, key = 0) => {
     return texts.slice();
 }
 
+export const getProjectDate = (key = 0) => {
+    return TextModel.projects[key].date;
+}
 export default getText;
