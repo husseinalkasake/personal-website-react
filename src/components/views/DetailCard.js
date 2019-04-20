@@ -43,7 +43,7 @@ class DetailCard extends Component {
         return window.innerWidth / 5;
     }
     dynamicStyle () {
-        let height = '15em';
+        let height = '10em';
         let flex = window.innerWidth <= 640 ? 'column' : 'row';
         switch (this.props.section) {
             case 'education':

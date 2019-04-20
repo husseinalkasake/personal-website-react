@@ -5,7 +5,7 @@ import '../styles/NavHeader.css';
 class NavHeader extends Component {
 
     render(){
-        let homeLink = {
+        const homeLink = {
             fontSize: window.innerWidth <= 900 ? '1em' : '2.25em'
         }
         return(
@@ -13,12 +13,16 @@ class NavHeader extends Component {
                 <Link className='link' to='/home'>
                     <a className="home-link" style={homeLink}>Hussein Alkasake</a>
                 </Link>
-                <Link className='link' to='/about'>About</Link>
-                <Link className='link' to='/experience'>Experience</Link>
-                <Link className='link' to='/projects'>Projects</Link>
-                <Link className='link' to='/education'>Education</Link>
+                <Link className={this.linkClasses('/about')} to='/about'>About</Link>
+                <Link className={this.linkClasses('/experience')} to='/experience'>Experience</Link>
+                <Link className={this.linkClasses('/projects')} to='/projects'>Projects</Link>
+                <Link className={this.linkClasses('/education')} to='/education'>Education</Link>
             </div>
         );
+    }
+    
+    linkClasses(path) {
+        return 'link' + (window.location.pathname === path ? ' selected-link' : '');
     }
 }
 

@@ -32,8 +32,11 @@
     }
     
   .link:hover{
-    /* color: #da44a8; */
       color: #6f8ebf;
+  }
+
+  .selected-link {
+    color: rgb(159, 173, 194);
   }
 
   div a {
