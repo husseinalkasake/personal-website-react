@@ -1,0 +1,9 @@
+.side-view {
+    background-color: black;
+    position: fixed;
+    right: 0px;
+    z-index: 2;
+    font-weight: bold;
+    padding: 1em;
+    color: rgb(148, 148, 148);
+}
