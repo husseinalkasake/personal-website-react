@@ -1,0 +1,2 @@
+export const SHOW_MORE_INFO = 'SHOW_MORE_INFO';
+export const UPDATE_SIDE_VIEW = 'UPDATE_SIDE_VIEW';

@@ -4,7 +4,10 @@ import '../styles/DetailCard.css';
 import Text from '../views/Text';
 import getImage from '../../models/ImageModel';
 import { getProjectDate } from '../../models/TextModel';
-class DetailCard extends Component {
+import { connect } from 'react-redux';
+import { showMoreInfo } from '../../redux/actions';
+
+class DetailCardComponent extends Component {
     state = {
         showMoreInfo: false
     }
@@ -54,6 +57,15 @@ class DetailCard extends Component {
         }
         return { minHeight: height, flexDirection: flex };
     }
-}
+};
 
+const mapStateToProps = state => ({
+    showMoreInfo: state.showMoreInfo
+});
+  
+const mapDispatchToProps = dispatch => ({
+    showMoreInfoTest: showInfo => dispatch(showMoreInfo(showInfo))
+});
+
+const DetailCard = connect(mapStateToProps, mapDispatchToProps)(DetailCardComponent);
 export default DetailCard;
