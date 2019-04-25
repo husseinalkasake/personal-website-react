@@ -8,16 +8,13 @@ import { connect } from 'react-redux';
 import { showMoreInfo } from '../../redux/actions';
 
 class DetailCardComponent extends Component {
-    state = {
-        showMoreInfo: false
-    }
 
     render(){
         const dateLabel = [];
         const moreInfo = [];
         if (this.props.section === 'projects') {
             dateLabel.push(<p className="date-label">{getProjectDate(this.props.importKey)}</p>);
-            moreInfo.push(<div className="more-info-button" onClick={()=> this.setState({showMoreInfo: true})}>MORE INFO</div>);
+            moreInfo.push(<div className="more-info-button" onClick={()=> this.props.showMoreInfo()}>MORE INFO</div>);
         }
         return(
             <div className="detail-card" style={this.dynamicStyle()}>
@@ -64,7 +61,7 @@ const mapStateToProps = state => ({
 });
   
 const mapDispatchToProps = dispatch => ({
-    showMoreInfoTest: showInfo => dispatch(showMoreInfo(showInfo))
+    showMoreInfo: showInfo => dispatch(showMoreInfo(showInfo))
 });
 
 const DetailCard = connect(mapStateToProps, mapDispatchToProps)(DetailCardComponent);

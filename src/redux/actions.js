@@ -1,9 +1,8 @@
 import { SHOW_MORE_INFO, UPDATE_SIDE_VIEW } from './action.types';
 
-export function showMoreInfo (showInfo) {
+export function showMoreInfo () {
     return {
-        type: SHOW_MORE_INFO,
-        payload: showInfo
+        type: SHOW_MORE_INFO
     };
 };
 

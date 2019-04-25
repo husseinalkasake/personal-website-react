@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import '../styles/SideView.css';
+import { connect } from 'react-redux';
 
-class SideView extends Component {
+class SideViewComponent extends Component {
 
-    render(){
-        return(
-            <div className='side-view' style={this.sideViewStyle()}>
-                TEST
-            </div>
-        );
+    render() {
+        if (!this.props.showMoreInfo) {
+            return(null);
+        }
+        else {
+            return(
+                <div className='side-view' style={this.sideViewStyle()}>
+                    TEST
+                </div>
+            );
+        }
     }
     sideViewStyle() {
         return {
@@ -18,4 +24,9 @@ class SideView extends Component {
     }
 }
 
+const mapStateToProps = state => ({
+    showMoreInfo: state.showMoreInfo
+});
+
+const SideView = connect(mapStateToProps)(SideViewComponent);
 export default SideView;

@@ -23,7 +23,7 @@ class Navigator extends Component {
         return(
             <Router>
                 <div>
-                    {/* <SideView/> */}
+                    <SideView/>
                     <div className='nav-container'>
                         <NavHeader/>
                         <div className='nav-body'>
