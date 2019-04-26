@@ -4,8 +4,9 @@ import '../styles/DetailCard.css';
 import Text from '../views/Text';
 import getImage from '../../models/ImageModel';
 import { getProjectDate } from '../../models/TextModel';
+import { projectHasMoreInfo } from '../../models/TextModel';
 import { connect } from 'react-redux';
-import { showMoreInfo } from '../../redux/actions';
+import { updateMoreInfoKey } from '../../redux/actions';
 
 class DetailCardComponent extends Component {
 
@@ -14,7 +15,13 @@ class DetailCardComponent extends Component {
         const moreInfo = [];
         if (this.props.section === 'projects') {
             dateLabel.push(<p className="date-label">{getProjectDate(this.props.importKey)}</p>);
-            moreInfo.push(<div className="more-info-button" onClick={()=> this.props.showMoreInfo()}>MORE INFO</div>);
+            if (projectHasMoreInfo(this.props.importKey)) {
+                moreInfo.push(
+                    <div className="more-info-button" onClick={e=> {e.stopPropagation(); this.props.updateMoreInfoKey(this.props.importKey)}}>
+                        MORE INFO
+                    </div>
+                );
+            }
         }
         return(
             <div className="detail-card" style={this.dynamicStyle()}>
@@ -55,14 +62,10 @@ class DetailCardComponent extends Component {
         return { minHeight: height, flexDirection: flex };
     }
 };
-
-const mapStateToProps = state => ({
-    showMoreInfo: state.showMoreInfo
-});
   
 const mapDispatchToProps = dispatch => ({
-    showMoreInfo: showInfo => dispatch(showMoreInfo(showInfo))
+    updateMoreInfoKey: (key) => dispatch(updateMoreInfoKey(key))
 });
 
-const DetailCard = connect(mapStateToProps, mapDispatchToProps)(DetailCardComponent);
+const DetailCard = connect(null, mapDispatchToProps)(DetailCardComponent);
 export default DetailCard;

@@ -70,6 +70,12 @@ const TextModel = {
                 "Supports the ability to search for albums, view details, choose favorites and create simple lists",
                 "Uses React Router for navigation and Axios for REST API calls; Last.fm API used to populate app data",
                 "Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management"
+            ],
+            moreInfo: [
+                "Test",
+                "Test",
+                "Test",
+                "Test"
             ]
         },{
             title: "Personal Portfolio Website",
@@ -79,6 +85,12 @@ const TextModel = {
                 "Simple Personal Portfolio Website to highlight personal skills and experience",
                 "Front-end based web app built using ReactJS to create clean, reusable components",
                 "Dynamically scale images and cards and use flexbox to ensure responsive design"
+            ],
+            moreInfo: [
+                "Test",
+                "Test",
+                "Test",
+                "Test"
             ]
         },{
             title: "NXT Coin Sorter",
@@ -87,6 +99,12 @@ const TextModel = {
                 "Worked as a team to design, build and code a Coin Sorting robot using a Lego Mindstorm kit",
                 "Build the mechanical design to turn circular motion of a motor to linear motion, pushing each coin towards a touch sensor to measure their diameters",
                 "Completed, tested and debugged the C++ code to operate the mechanical system efficiently"
+            ],
+            moreInfo: [
+                "Test",
+                "Test",
+                "Test",
+                "Test"
             ]
         },{
             title: "Fuel Cell Car",
@@ -94,6 +112,12 @@ const TextModel = {
             summary: [
                 "Maintained Hydrogen fuel cell equipment provided by the university to develop a line following car that could travel through three different courses",
                 "Completed a RobotC line following algorithm and tested it on each course to optimize the left and right bias of the code"
+            ],
+            moreInfo: [
+                "Test",
+                "Test",
+                "Test",
+                "Test"
             ]
         }
     ],
@@ -170,6 +194,13 @@ const getText = (section, styles = {}, key = 0) => {
             });
             texts.push(<ul>{ list }</ul>);
             break;
+        case 'projectItem':
+            const projectItem = TextModel.projects[key];
+            if (projectItem.subtitle) texts.push(<p style={styles}>{ projectItem.subtitle}</p>);
+            projectItem.moreInfo.map(text => {
+                texts.push(<p style={styles}>{text}</p>);
+            });
+            break;
         case 'education':
             const institution = TextModel.education[key];
             texts.push(<p style={styles}>{ institution.institution}</p>);
@@ -194,4 +225,13 @@ const getText = (section, styles = {}, key = 0) => {
 export const getProjectDate = (key = 0) => {
     return TextModel.projects[key].date;
 }
+
+export const getProjectTitle = (key = 0) => {
+    return TextModel.projects[key].title;
+}
+
+export const projectHasMoreInfo = (key = 0) => {
+    return TextModel.projects[key].moreInfo && TextModel.projects[key].moreInfo !== null;
+}
+
 export default getText;

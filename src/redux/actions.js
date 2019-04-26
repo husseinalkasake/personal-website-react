@@ -1,14 +1,15 @@
-import { SHOW_MORE_INFO, UPDATE_SIDE_VIEW } from './action.types';
+import { SHOW_MORE_INFO, UPDATE_MORE_INFO_KEY } from './action.types';
 
-export function showMoreInfo () {
+export function showMoreInfo (showMoreInfo) {
     return {
-        type: SHOW_MORE_INFO
+        type: SHOW_MORE_INFO,
+        payload: showMoreInfo
     };
 };
 
-export function updateSideView (sideViewData) {
+export function updateMoreInfoKey(moreInfoKey) {
     return {
-        type: UPDATE_SIDE_VIEW,
-        payload: sideViewData
+        type: UPDATE_MORE_INFO_KEY,
+        payload: moreInfoKey
     };
 };

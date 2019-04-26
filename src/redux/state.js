@@ -1,6 +1,6 @@
 const initialState = {
-    sideViewData: false,
-    showMoreInfo: false
+    showMoreInfo: false,
+    projectMoreInfoKey: false
 };
 
 export default initialState;

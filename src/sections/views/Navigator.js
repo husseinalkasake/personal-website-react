@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import '../styles/Navigator.css';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,17 +15,18 @@ import Projects from './Projects';
 import Contact from './Contact';
 import NavHeader from '../../components/views/NavHeader';
 import SideView from '../../components/views/SideView';
-import '../styles/Navigator.css';
 import Skills from './Skills';
+import { connect } from 'react-redux';
+import { showMoreInfo } from '../../redux/actions';
 
-class Navigator extends Component {
+class NavigatorComponent extends Component {
 
     render(){
         return(
             <Router>
                 <div>
                     <SideView/>
-                    <div className='nav-container'>
+                    <div className='nav-container' onClick={()=> this.props.showMoreInfo(false)}>
                         <NavHeader/>
                         <div className='nav-body'>
                             <Switch>
@@ -44,6 +46,11 @@ class Navigator extends Component {
         );
     }
 }
+  
+const mapDispatchToProps = dispatch => ({
+    showMoreInfo: showInfo => dispatch(showMoreInfo(showInfo))
+});
 
+const Navigator = connect(null, mapDispatchToProps)(NavigatorComponent);
 export default withRouter(Navigator);
 
