@@ -78,7 +78,7 @@ const TextModel = {
                 "Test"
             ]
         },{
-            title: "Personal Portfolio Website",
+            title: "Personal Website",
             subtitle: "probably where you're reading this right now :)",
             date: "2018 - 2019",
             summary: [

@@ -7,6 +7,7 @@ const ImageModel = {
         require('../images/mhs-logo.png'),
         require('../images/trans-plan-logo.png')
     ],
+    projects: [],
     education: [
         require('../images/uw-logo.png'),
         require('../images/bluevale-logo.png')
