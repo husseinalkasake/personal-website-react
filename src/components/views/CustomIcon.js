@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 const FontAwesome = require('react-fontawesome');
 
-class FontAwesomeIcon extends Component {
+class CustomIcon extends Component {
     render() {
         return(
             <FontAwesome
@@ -14,4 +14,4 @@ class FontAwesomeIcon extends Component {
         );
     }
 };
-export default FontAwesomeIcon;
+export default CustomIcon;

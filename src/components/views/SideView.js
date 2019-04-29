@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../styles/SideView.css';
 import Text from '../views/Text';
 import { connect } from 'react-redux';
-import FontAwesomeIcon from './FontAwesomeIcon';
+import CustomIcon from './CustomIcon';
 import { showMoreInfo } from '../../redux/actions';
 import { getProjectDate } from '../../models/TextModel';
 import { getProjectTitle } from '../../models/TextModel';
@@ -19,7 +19,7 @@ class SideViewComponent extends Component {
             return(
                 <div className='side-view' style={this.sideViewStyle()}>
                     <div>
-                        <FontAwesomeIcon name="arrow-left" size="2x" style={{cursor: 'pointer'}} onClick={()=>{this.props.showMoreInfo()}}/>
+                        <CustomIcon name="arrow-left" size="2x" style={{cursor: 'pointer'}} onClick={()=>{this.props.showMoreInfo()}}/>
                         <span className="side-view-title">{getProjectTitle(this.props.importKey)}</span>
                         {dateLabel}
                     </div>

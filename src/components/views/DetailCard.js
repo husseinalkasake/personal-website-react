@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Image from 'react-image-resizer';
 import '../styles/DetailCard.css';
 import Text from '../views/Text';
+import CustomButton from '../views/CustomButton';
 import getImage from '../../models/ImageModel';
 import { getProjectDate } from '../../models/TextModel';
+import { getProjectSource } from '../../models/TextModel';
 import { projectHasMoreInfo } from '../../models/TextModel';
 import { connect } from 'react-redux';
 import { updateMoreInfoKey } from '../../redux/actions';
@@ -16,12 +18,10 @@ class DetailCardComponent extends Component {
         if (this.props.section === 'projects') {
             dateLabel.push(<p className="date-label">{getProjectDate(this.props.importKey)}</p>);
             if (projectHasMoreInfo(this.props.importKey)) {
-                moreInfo.push(
-                    <div className="more-info-button" onClick={e=> {e.stopPropagation(); this.props.updateMoreInfoKey(this.props.importKey)}}>
-                        MORE INFO
-                    </div>
-                );
+                moreInfo.push(<CustomButton text="MORE INFO" onClick={() => this.props.updateMoreInfoKey(this.props.importKey)}/>);
             }
+            // const projectSource = getProjectSource(this.props.importKey);
+            // if (projectSource !== null) moreInfo.push(<a target="_blank" href={projectSource}><img src={require('../../images/github-logo.png')}/></a>); 
         }
         return(
             <div className="detail-card" style={this.dynamicStyle()}>

@@ -63,7 +63,8 @@ const TextModel = {
     ],
     projects: [{
             title: "Endless Charts",
-            subtitle: "Album Chart Mobile Application - WORK IN PROGRESS",
+            subtitle: "Album Chart Mobile Application",
+            workInProgress: true,
             date: "2019",
             summary: [
                 "Cross-platform mobile application currently building for Android using React Native",
@@ -80,18 +81,18 @@ const TextModel = {
         },{
             title: "Personal Website",
             subtitle: "probably where you're reading this right now :)",
-            date: "2018 - 2019",
+            date: "2018",
             summary: [
                 "Simple Personal Portfolio Website to highlight personal skills and experience",
                 "Front-end based web app built using ReactJS to create clean, reusable components",
                 "Dynamically scale images and cards and use flexbox to ensure responsive design"
             ],
             moreInfo: [
-                "Test",
-                "Test",
-                "Test",
-                "Test"
-            ]
+                "The purpose of the project was to create a simple portfolio showcasing my personal skills and experience gained throughout my career. Considering that the website would basically just display text and images, no backend felt like it was needed. I initially thought to use vanilla JS/HTML/CSS, but I eventually decided to go with using ReactJS for the frontend. While it can be argued that React is sort of overkill in this case due to the simplicity of the project, reusability is a big advantage to the component-based approach React takes which makes updating the website with recent experience very simple and ensures consistency throughout the application.",
+                "To properly organize the application, it was important to seperate it into different layers. The views layer contains the container components for the different sections of the website (About, Experience, Projects, etc..). The components layer contains smaller reusable components such as the main card used throughout to display information. The models layer contains the Text and Image models where the entire application pulls resources from. The final layer is the redux layer which holds the redux store, reducers and actions to manage the app's state. This ensures the entire application deals with a single, immutable source of truth.",
+                "As far as third party libraries goes, the main ones used are React-Router to manage the navigation between different sections shown and Redux to manage the application's state."
+            ],
+            source: 'https://github.com/husseinalkasake/personal-website-react'
         },{
             title: "NXT Coin Sorter",
             date: "2016",
@@ -159,7 +160,11 @@ const TextModel = {
                 ]
             }]
         }
-    ]
+    ],
+    extras: {
+        note: 'Note: ',
+        workInProgressMessage: 'This project is a work in progress.'
+    }
 };
 
 const getText = (section, styles = {}, key = 0) => {
@@ -197,6 +202,7 @@ const getText = (section, styles = {}, key = 0) => {
         case 'projectItem':
             const projectItem = TextModel.projects[key];
             if (projectItem.subtitle) texts.push(<p style={styles}>{ projectItem.subtitle}</p>);
+            if (projectItem.workInProgress) texts.push(workInProgressMessage(styles));
             projectItem.moreInfo.map(text => {
                 texts.push(<p style={styles}>{text}</p>);
             });
@@ -222,6 +228,16 @@ const getText = (section, styles = {}, key = 0) => {
     return texts.slice();
 }
 
+const workInProgressMessage = (styles = {}) => {
+    return [
+        <p style={styles}>
+            <span style={{fontWeight: 'bold'}}>{TextModel.extras.note}</span>
+            { TextModel.extras.workInProgressMessage }
+        </p>,
+        <br/>
+    ];
+}
+
 export const getProjectDate = (key = 0) => {
     return TextModel.projects[key].date;
 }
@@ -232,6 +248,11 @@ export const getProjectTitle = (key = 0) => {
 
 export const projectHasMoreInfo = (key = 0) => {
     return TextModel.projects[key].moreInfo && TextModel.projects[key].moreInfo !== null;
+}
+
+export const getProjectSource = (key = 0) => {
+    const project = TextModel.projects[key];
+    return (project.source && project.source !== null) ? project.source : null;
 }
 
 export default getText;
