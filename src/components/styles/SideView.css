@@ -3,10 +3,9 @@
     position: fixed;
     right: 0px;
     z-index: 2;
-    /* font-weight: bold; */
     padding: 1em;
     color: white;
-    /* color: rgb(148, 148, 148); */
+    overflow: auto;
 }
 
 .side-view-title {
@@ -24,4 +23,8 @@
     top: 0;
     right: 1em;
     font-weight: bold;
+}
+
+.side-view a {
+    color: rgb(148, 148, 148);
 }

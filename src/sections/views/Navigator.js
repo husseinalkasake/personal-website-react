@@ -15,9 +15,10 @@ import Projects from './Projects';
 import Contact from './Contact';
 import NavHeader from '../../components/views/NavHeader';
 import SideView from '../../components/views/SideView';
+import SideMenu from '../../components/views/SideMenu';
 import Skills from './Skills';
 import { connect } from 'react-redux';
-import { showMoreInfo } from '../../redux/actions';
+import { closeMenus } from '../../redux/actions';
 
 class NavigatorComponent extends Component {
 
@@ -26,7 +27,8 @@ class NavigatorComponent extends Component {
             <Router>
                 <div>
                     <SideView/>
-                    <div className='nav-container' onClick={()=> this.props.showMoreInfo(false)}>
+                    <SideMenu/>
+                    <div className='nav-container' onClick={()=> this.props.closeMenus()}>
                         <NavHeader/>
                         <div className='nav-body'>
                             <Switch>
@@ -48,7 +50,7 @@ class NavigatorComponent extends Component {
 }
   
 const mapDispatchToProps = dispatch => ({
-    showMoreInfo: showInfo => dispatch(showMoreInfo(showInfo))
+    closeMenus: () => dispatch(closeMenus())
 });
 
 const Navigator = connect(null, mapDispatchToProps)(NavigatorComponent);

@@ -3,9 +3,11 @@ import '../styles/SideView.css';
 import Text from '../views/Text';
 import { connect } from 'react-redux';
 import CustomIcon from './CustomIcon';
+import CustomButton from './CustomButton';
 import { showMoreInfo } from '../../redux/actions';
 import { getProjectDate } from '../../models/TextModel';
 import { getProjectTitle } from '../../models/TextModel';
+import { getProjectSource } from '../../models/TextModel';
 
 class SideViewComponent extends Component {
 
@@ -14,21 +16,28 @@ class SideViewComponent extends Component {
             return(null);
         }
         else {
-            const dateLabel = [];
-            dateLabel.push(<p className="date-label">{getProjectDate(this.props.importKey)}</p>);
             return(
                 <div className='side-view' style={this.sideViewStyle()}>
                     <div>
                         <CustomIcon name="arrow-left" size="2x" style={{cursor: 'pointer'}} onClick={()=>{this.props.showMoreInfo()}}/>
                         <span className="side-view-title">{getProjectTitle(this.props.importKey)}</span>
-                        {dateLabel}
+                        <p className="date-label">{getProjectDate(this.props.importKey)}</p>
                     </div>
                     <div className='side-view-body'>
                         <Text fontfamily='Montserrat' section="projectItem" importKey={this.props.importKey}/>
+                        { this.sourceButton() }
                     </div>
                 </div>
             );
         }
+    }
+    sourceButton() {
+        const source = [];
+        const projectSource = getProjectSource(this.props.importKey);
+        if (projectSource !== null) {
+            source.push(<a target="_blank" href={projectSource}><CustomButton text="View on Github"/></a>);
+        }
+        return source;
     }
     sideViewStyle() {
         return {

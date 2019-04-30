@@ -75,9 +75,9 @@ const TextModel = {
             moreInfo: [
                 "Test",
                 "Test",
-                "Test",
                 "Test"
-            ]
+            ],
+            source: 'https://github.com/husseinalkasake/endlesscharts'
         },{
             title: "Personal Website",
             subtitle: "probably where you're reading this right now :)",
@@ -94,6 +94,33 @@ const TextModel = {
             ],
             source: 'https://github.com/husseinalkasake/personal-website-react'
         },{
+            title: "Task Scheduling RTOS",
+            date: "2018",
+            summary: [
+                "Built a basic task scheduling real-time operating system using C and RTOS course material"
+            ],
+            moreInfo: [
+                "Test"
+            ]
+        },{
+            title: "Magnet detecting line following robot",
+            date: "2018",
+            summary: [
+                "Built and programmed a line following and magnet detecting robot using C and soldering skills"
+            ],
+            moreInfo: [
+                "Test"
+            ]
+        },{
+            title: "3D Truss Bridge",
+            date: "2017",
+            summary: [
+                "Designed and built a 3D Truss Bridge Design using stress and force analysis and AutoCAD skills"
+            ],
+            moreInfo: [
+                "Test"
+            ]
+        },{
             title: "NXT Coin Sorter",
             date: "2016",
             summary: [
@@ -102,7 +129,6 @@ const TextModel = {
                 "Completed, tested and debugged the C++ code to operate the mechanical system efficiently"
             ],
             moreInfo: [
-                "Test",
                 "Test",
                 "Test",
                 "Test"
@@ -115,7 +141,6 @@ const TextModel = {
                 "Completed a RobotC line following algorithm and tested it on each course to optimize the left and right bias of the code"
             ],
             moreInfo: [
-                "Test",
                 "Test",
                 "Test",
                 "Test"

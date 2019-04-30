@@ -20,8 +20,10 @@ class DetailCardComponent extends Component {
             if (projectHasMoreInfo(this.props.importKey)) {
                 moreInfo.push(<CustomButton text="MORE INFO" onClick={() => this.props.updateMoreInfoKey(this.props.importKey)}/>);
             }
-            // const projectSource = getProjectSource(this.props.importKey);
-            // if (projectSource !== null) moreInfo.push(<a target="_blank" href={projectSource}><img src={require('../../images/github-logo.png')}/></a>); 
+            const projectSource = getProjectSource(this.props.importKey);
+            if (projectSource !== null) {
+                moreInfo.push(<a target="_blank" href={projectSource}><CustomButton text="View on Github"/></a>);
+            }
         }
         return(
             <div className="detail-card" style={this.dynamicStyle()}>
@@ -32,7 +34,9 @@ class DetailCardComponent extends Component {
                     </div>
                     <div className="detail-text">
                         <Text fontfamily='Montserrat' section={this.props.section} importKey={this.props.importKey}/>
+                        <div>
                         { moreInfo }
+                        </div>
                     </div>
                 </div>
             </div>

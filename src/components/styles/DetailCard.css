@@ -30,6 +30,21 @@
         color: rgb(148, 148, 148);
     }
 
+    .detail-text img {
+        height: 2.5em;
+        width: 2.5em;
+        position: absolute;
+        left: 30em;
+    }
+
+    .detail-text a {
+        color: inherit;
+    }
+
+    .detail-text a div {
+        margin-left: 0.5em;
+    }
+
     .date-label {
         position: absolute;
         top: 0;
