@@ -15,3 +15,14 @@
         padding: 1em;
         border-radius: 4em;
     }
+
+    .about-logo-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-logo-container img {
+        height: 2em;
+        width: 2em;
+        border-radius: 0;
+    }

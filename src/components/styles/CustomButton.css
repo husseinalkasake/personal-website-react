@@ -6,6 +6,7 @@
     font-weight: bold;
     float: left;
     cursor: pointer;
+    margin-bottom: 1em;
     padding: 0.8em 1em 0.8em 1em;
     border-color: rgb(148, 148, 148);
 }

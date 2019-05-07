@@ -8,7 +8,20 @@ class About extends Component {
     render(){
         return(
             <div style={this.dynamicSize()} className='about-container'>
-                <Text fontfamily='Montserrat' section='about'/>
+                <div>
+                    <Text fontfamily='Montserrat' section='about'/>
+                    <div className="about-logo-container">
+                        <a target="_blank" href='https://www.linkedin.com/in/hussein-alkasake/'>
+                            <img src={require('../../images/linkedin-logo-white.png')}/>
+                        </a>
+                        <a target="_blank" href='https://github.com/husseinalkasake'>
+                            <img src={require('../../images/github-logo-white.png')}/>
+                        </a>
+                        <a target="_blank" href='https://drive.google.com/file/d/1cjHPtcBU532lX8RXLQFbmXzW0fKWQ8NE/view'>
+                            <img src={require('../../images/cv-icon-white.png')}/>
+                        </a>
+                    </div>
+                </div>
                 <img src={ getImage('about')} height={this.dynamicImageHeight()} width={this.dynamicImageWidth()}/>
             </div>
         );
