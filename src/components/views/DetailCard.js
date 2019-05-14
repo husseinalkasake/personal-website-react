@@ -46,12 +46,19 @@ class DetailCardComponent extends Component {
         switch(this.props.section) {
             case 'education':
                 return window.innerHeight / 3;
+            case 'projects':
+                return window.innerHeight / 4;
             default:
                 return window.innerHeight / 5;
         }
     }
     dynamicImageWidth () {
-        return window.innerWidth / 5;
+        switch(this.props.section) {
+            case 'projects':
+                return window.innerWidth / 7;
+            default:
+                return window.innerWidth / 6;
+        }
     }
     dynamicStyle () {
         let height = '10em';

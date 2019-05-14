@@ -5,9 +5,7 @@ import { connect } from 'react-redux';
 import CustomIcon from './CustomIcon';
 import CustomButton from './CustomButton';
 import { showMoreInfo } from '../../redux/actions';
-import { getProjectDate } from '../../models/TextModel';
-import { getProjectTitle } from '../../models/TextModel';
-import { getProjectSource } from '../../models/TextModel';
+import { getProjectDate, getProjectTitle, getProjectSource, getProjectVideo } from '../../models/TextModel';
 
 class SideViewComponent extends Component {
 
@@ -27,6 +25,7 @@ class SideViewComponent extends Component {
                         <Text fontfamily='Montserrat' section="projectItem" importKey={this.props.importKey}/>
                         { this.sourceButton() }
                     </div>
+                    { this.video() }
                 </div>
             );
         }
@@ -38,6 +37,25 @@ class SideViewComponent extends Component {
             source.push(<a target="_blank" href={projectSource}><CustomButton text="View on Github"/></a>);
         }
         return source;
+    }
+    video() {
+        const video = [];
+        const projectVideo = getProjectVideo(this.props.importKey);
+        if (projectVideo !== null) {
+            let style = {
+                paddingTop: '2em',
+                paddingBottom: '2em',
+                height: window.innerHeight / 1.5
+            };
+            if (!projectVideo.web) {
+                video.push(
+                    <video style={style} autoPlay loop muted>
+                        <source src={projectVideo.source} type='video/mp4'/>
+                    </video>
+                );
+            }
+        }
+        return video;
     }
     sideViewStyle() {
         return {

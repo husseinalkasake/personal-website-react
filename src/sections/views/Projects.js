@@ -18,7 +18,6 @@ class Projects extends Component {
                     <DetailCard section='projects' importKey={3}/>
                     <DetailCard section='projects' importKey={4}/>
                     <DetailCard section='projects' importKey={5}/>
-                    <DetailCard section='projects' importKey={6}/>
                 </div>
             </div>
         );

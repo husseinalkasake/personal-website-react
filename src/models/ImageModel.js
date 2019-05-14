@@ -7,7 +7,14 @@ const ImageModel = {
         require('../images/mhs-logo.png'),
         require('../images/trans-plan-logo.png')
     ],
-    projects: [],
+    projects: [
+        require('../images/endless-charts-logo.png'),
+        require('../images/hussein-alkasake-logo.png'),
+        require('../images/robot-circuit-board.png'),
+        require('../images/truss-bridge.png'),
+        require('../images/nxt-coin-sorter.png'),
+        require('../images/fuel-cell-car.png')
+    ],
     education: [
         require('../images/uw-logo.png'),
         require('../images/bluevale-logo.png')
@@ -15,7 +22,6 @@ const ImageModel = {
 };
 
 const getImage = (section, key = 0) => {
-
     let image = '';
     switch(section){
         case 'home':
@@ -29,6 +35,9 @@ const getImage = (section, key = 0) => {
             break;
         case 'education':
             image = ImageModel.education[key];
+            break;
+        case 'projects':
+            image = ImageModel.projects[key];
             break;
         default:
             break;

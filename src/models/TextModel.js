@@ -73,11 +73,15 @@ const TextModel = {
                 "Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management"
             ],
             moreInfo: [
-                "Test",
-                "Test",
-                "Test"
+                "The purpose of this project is to build a music album chart/list creating mobile application. The project is inspired by popular chart rendering tools such as Neverending Charts which allow users to create drag and drop charts of their favorite albums and movies. It is currently being built for Android and will allow users to search and favorite albums as well as adding them to their own shareable drag and drop lists.",
+                "Before starting on the application, alot of time was spent exploring different options. While doing it natively would've been the best option in terms of performance, I was interested in exploring existing cross-platform development options considering my previous experience with Xamarin. I eventually decided to use React Native due to how much I enjoy working with ReactJS. One runner up option, Flutter was very interesting to me due to their approach to rendering components and their Dart language, but it was still very new and lacked in terms of support and community despite their excellent documentation.",
+                "The application uses the Last.fm public API to fetch album information. In terms of third-party libraries used, the NativeBase component library was used to provide consistent, reusable basic components. Other ones include Redux for state management, React Router for navigation and Axios to handle REST API calls."
             ],
-            source: 'https://github.com/husseinalkasake/endlesscharts'
+            source: 'https://github.com/husseinalkasake/endlesscharts',
+            video: {
+                web: false,
+                source: require('../images/endless-charts.mp4')
+            }
         },{
             title: "Personal Website",
             subtitle: "probably where you're reading this right now :)",
@@ -94,19 +98,13 @@ const TextModel = {
             ],
             source: 'https://github.com/husseinalkasake/personal-website-react'
         },{
-            title: "Task Scheduling RTOS",
-            date: "2018",
-            summary: [
-                "Built a basic task scheduling real-time operating system using C and RTOS course material"
-            ],
-            moreInfo: [
-                "Test"
-            ]
-        },{
             title: "Magnet detecting line following robot",
             date: "2018",
             summary: [
-                "Built and programmed a line following and magnet detecting robot using C and soldering skills"
+                "Built a line following and magnet detecting robot using programmable circuit board and motors",
+                "Soldered circuit components onto PCB following circuit schematics",
+                "Wrote and debugged magnet detecting and line following algorithms using C",
+                "Configured tolerances of magentic and light detecting sensors through rigorous testing"
             ],
             moreInfo: [
                 "Test"
@@ -115,7 +113,10 @@ const TextModel = {
             title: "3D Truss Bridge",
             date: "2017",
             summary: [
-                "Designed and built a 3D Truss Bridge Design using stress and force analysis and AutoCAD skills"
+                "Designed and built 3D Truss Bridge using stress and force analysis as well as AutoCAD skills",
+                "Created and analyzed multiple bridge designs using force analysis and engineering skills",
+                "Designed all required pieces using AutoCAD; Created them using laser cutter",
+                "Tested multiple versions of design with loads; Analyzed failures to improve design"
             ],
             moreInfo: [
                 "Test"
@@ -278,6 +279,11 @@ export const projectHasMoreInfo = (key = 0) => {
 export const getProjectSource = (key = 0) => {
     const project = TextModel.projects[key];
     return (project.source && project.source !== null) ? project.source : null;
+}
+
+export const getProjectVideo = (key = 0) => {
+    const project = TextModel.projects[key];
+    return (project.video && project.video !== null) ? project.video : null;
 }
 
 export default getText;
