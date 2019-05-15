@@ -12,7 +12,7 @@ class LogosCard extends Component {
                 <a target="_blank" href='https://github.com/husseinalkasake'>
                     <img src={require('../../images/github-logo.png')}/>
                 </a>
-                <a target="_blank" href='https://drive.google.com/file/d/1cjHPtcBU532lX8RXLQFbmXzW0fKWQ8NE/view'>
+                <a target="_blank" href='https://drive.google.com/file/d/1bZIrxNE075LehBAyDxpFSFwTAeZCEzR-'>
                     <img src={require('../../images/cv-icon.png')}/>
                 </a>
             </div>
