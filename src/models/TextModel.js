@@ -107,7 +107,13 @@ const TextModel = {
                 "Configured tolerances of magentic and light detecting sensors through rigorous testing"
             ],
             moreInfo: [
-                "Test"
+                "This project was a term long project for our 2nd year Circuits course that was done over 10 lab sessions. The project involved analyzing circuit schematics, writing and flashing C alogirthms and manually soldering components onto a programmable circuit board accordingly.",
+                "The line following and magnet detecting of the robot was done by writing, compiling and flashing C algorithms onto the microcontroller of the board using a universal port connector. Magnet detecting and light detecting sensors were soldered on and calibration hardware issues were corrected through testing and defining tolerances through software. The robot was then tested on different tracks where it must follow a black line on a white board as well as stop and flash an LED when it detects a magnet within a specific range.",
+                "While the project was more mechanical than software based, alot of software debugging and calibration still went into it to match design constraints. The project was a success as it followed the line perfectly and most of the magnets were detected, earning a near perfect mark. Unfortunately no recording was allowed in the lab session but the finished board with all soldered circuit components is showed below."
+            ],
+            images: [
+                require('../images/robot-circuit-board-1.png'),
+                require('../images/robot-circuit-board-2.png')
             ]
         },{
             title: "3D Truss Bridge",
@@ -119,8 +125,19 @@ const TextModel = {
                 "Tested multiple versions of design with loads; Analyzed failures to improve design"
             ],
             moreInfo: [
-                "Test"
-            ]
+                "This project was for our 2nd year material design course where we had to design a truss bridge that can hold as many weights as possible before breaking. The bridge was designed using AutoCAD and built using laser cut wooden pieces. Force and stress analysis was used to predict and improve bridge designs as well as a couple of test runs with weights.",
+                "The project was mainly mechanical with not much software besides creating AutoCAD schematics. However, as a standard assignment, it still provided some great engineering design experience. The project was a success as it ended up being one of the longest standing bridges before failure. The bridge's building progress, final design, breaking and aftermath can be seen below."
+            ],
+            images: [
+                require('../images/truss-bridge-break.gif'),
+                require('../images/truss-bridge-progress.png'),
+                require('../images/truss-bridge-2.png'),
+                require('../images/truss-bridge-aftermath.png')
+            ],
+            video: {
+                web: true,
+                source: 'https://www.youtube.com/embed/QjMBVHinv8c'
+            }
         },{
             title: "NXT Coin Sorter",
             date: "2016",
@@ -130,9 +147,13 @@ const TextModel = {
                 "Completed, tested and debugged the C++ code to operate the mechanical system efficiently"
             ],
             moreInfo: [
-                "Test",
-                "Test",
-                "Test"
+                "This was the major first year engineering design project for my program, where we had to design and build a mechanical system using an NXT Lego Mindstorm Kit. We decided to create a robot that would sort different coins based on their size. We decided to use the RobotC to program our robot to perform its functionality.",
+                "The project was mainly mechanical as building the physical hardware was the major challenge. The design was to load each coin on a conveyor belt that moved each coin to the measurement arm. For each coin the measurement arm moves at the same pace. We were able to utilise this design by measuring the time it took for each coin to be pushed into the touch sensor. This gave us a range of values for each size and allowed us to differentiate between sizes of coins. After concluding the size of the coin the wheel then turns to the correct cup by stopping at the right colour (different colour for each size of coin) using a colour sensor. The conveyor belt would then simultaneously move the measured coin into the correct cup and move the next coin to the measurement arm."
+            ],
+            images: [
+                require('../images/nxt-coin-sorter-1.png'),
+                require('../images/nxt-coin-sorter-2.png'),
+                require('../images/nxt-coin-sorter-3.png')
             ]
         },{
             title: "Fuel Cell Car",
@@ -142,9 +163,11 @@ const TextModel = {
                 "Completed a RobotC line following algorithm and tested it on each course to optimize the left and right bias of the code"
             ],
             moreInfo: [
-                "Test",
-                "Test",
-                "Test"
+                "The purpose of this project was to design and program the code for a hydrogen fuel cell powered car to follow lines on several different tracks.",
+                "Our group designed our own chassis for the car which involved space to hold the fuel cells and water containers. The code was designed to follow lines so the code base could be reused for each course. The project was generally a success as we completed all courses and recieved an award for best design in our class."
+            ],
+            images: [
+                require('../images/fuel-cell-car.png')
             ]
         }
     ],
@@ -284,6 +307,11 @@ export const getProjectSource = (key = 0) => {
 export const getProjectVideo = (key = 0) => {
     const project = TextModel.projects[key];
     return (project.video && project.video !== null) ? project.video : null;
+}
+
+export const getProjectImages = (key = 0) => {
+    const project = TextModel.projects[key];
+    return (project.images && project.images !== null) ? project.images : null;
 }
 
 export default getText;

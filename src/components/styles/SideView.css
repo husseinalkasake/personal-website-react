@@ -28,3 +28,11 @@
 .side-view a {
     color: rgb(148, 148, 148);
 }
+
+.side-view img {
+    border-radius: 2em;
+}
+
+iframe {
+    padding: 2em;
+}

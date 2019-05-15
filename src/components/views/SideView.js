@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import CustomIcon from './CustomIcon';
 import CustomButton from './CustomButton';
 import { showMoreInfo } from '../../redux/actions';
-import { getProjectDate, getProjectTitle, getProjectSource, getProjectVideo } from '../../models/TextModel';
+import { getProjectDate, getProjectTitle, getProjectSource, getProjectVideo, getProjectImages } from '../../models/TextModel';
 
 class SideViewComponent extends Component {
 
@@ -25,7 +25,7 @@ class SideViewComponent extends Component {
                         <Text fontfamily='Montserrat' section="projectItem" importKey={this.props.importKey}/>
                         { this.sourceButton() }
                     </div>
-                    { this.video() }
+                    { this.media() }
                 </div>
             );
         }
@@ -38,8 +38,18 @@ class SideViewComponent extends Component {
         }
         return source;
     }
-    video() {
-        const video = [];
+    media() {
+        const media = [];
+        const projectImages = getProjectImages(this.props.importKey);
+        if (projectImages !== null) {
+            projectImages.map(image => {
+                media.push(
+                    <div style={{padding: '1em'}}>
+                        <img src={image} width={this.dynamicImageWidth()}/>
+                    </div>
+                )
+            });
+        }
         const projectVideo = getProjectVideo(this.props.importKey);
         if (projectVideo !== null) {
             let style = {
@@ -48,14 +58,28 @@ class SideViewComponent extends Component {
                 height: window.innerHeight / 1.5
             };
             if (!projectVideo.web) {
-                video.push(
+                media.push(
                     <video style={style} autoPlay loop muted>
                         <source src={projectVideo.source} type='video/mp4'/>
                     </video>
                 );
+            } else {
+                media.push(
+                    <iframe 
+                        width={window.innerWidth / 2}
+                        height={window.innerHeight / 1.5}
+                        src={projectVideo.source}
+                        frameborder="0"
+                        allowfullscreen
+                        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
+                    </iframe>
+                )
             }
         }
-        return video;
+        return media;
+    }
+    dynamicImageWidth() {
+        return window.innerWidth < 640 ? window.innerWidth / 1.2 : window.innerWidth / 2;
     }
     sideViewStyle() {
         return {
