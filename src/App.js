@@ -1,19 +1,19 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {
-  BrowserRouter
-} from "react-router-dom"; 
-import Navigator from './Navigator';
+import './styles/App.css';
+import MediaLoad from './MediaLoad';
+import { HashRouter } from "react-router-dom";
+import Navigator from './sections/views/Navigator';
 
 class App extends Component {
+
   render() {
     return (
-      <div class='app-container'>
-      <BrowserRouter>
-        <Navigator/>
-    </BrowserRouter>
-    </div>
+        <div className='app-container'>
+          <HashRouter>
+            <Navigator/>
+          </HashRouter>
+          <MediaLoad/>
+        </div>
     );
   }
 }

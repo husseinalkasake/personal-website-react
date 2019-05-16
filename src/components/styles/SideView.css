@@ -1,0 +1,38 @@
+.side-view {
+    background-color: black;
+    position: fixed;
+    right: 0px;
+    z-index: 2;
+    padding: 1em;
+    color: white;
+    overflow: auto;
+}
+
+.side-view-title {
+    font-size: 2em;
+    font-weight: bold;
+    padding-left: 0.5em;
+}
+
+.side-view-body {
+    padding: 2em;
+}
+
+.date-label {
+    position: absolute;
+    top: 0;
+    right: 1em;
+    font-weight: bold;
+}
+
+.side-view a {
+    color: rgb(148, 148, 148);
+}
+
+.side-view img {
+    border-radius: 2em;
+}
+
+iframe {
+    padding: 2em;
+}

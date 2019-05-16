@@ -1,0 +1,28 @@
+    .about-container {
+        display: flex;
+        margin: 1em;
+        justify-content: center;
+        align-content: center;
+        font-family: 'Montserrat';
+    }
+
+    .about-container p {
+        font-size: 1em;
+        padding: 0 1em 0 1em;
+    }
+
+    .about-container img {
+        padding: 1em;
+        border-radius: 4em;
+    }
+
+    .about-logo-container {
+        display: flex;
+        justify-content: center;
+    }
+    
+    .about-logo-container img {
+        height: 2em;
+        width: 2em;
+        border-radius: 0;
+    }

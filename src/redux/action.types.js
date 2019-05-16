@@ -1,0 +1,4 @@
+export const SHOW_MORE_INFO = 'SHOW_MORE_INFO';
+export const SHOW_SIDE_MENU = 'SHOW_SIDE_MENU'; 
+export const CLOSE_MENUS = 'CLOSE_MENUS';
+export const UPDATE_MORE_INFO_KEY = 'UPDATE_MORE_INFO_KEY';

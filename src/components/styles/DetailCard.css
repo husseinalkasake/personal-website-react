@@ -1,0 +1,53 @@
+    .detail-card {
+        display: flex;
+        margin: 1em;
+        /* min-height: 10em; */
+        border-radius: 1em;
+        position: relative;
+        background-color: rgb(18, 33, 43);
+    }
+
+    .card-content {
+        align-content: center;
+    }
+
+    .image-container {
+        max-width: 600px;
+        padding-left: 24px;
+        float: left;
+        padding-right: 24px;
+        vertical-align: center;
+    }
+
+    .detail-card img {
+        background-color: inherit;
+    }
+
+    .detail-text {
+        font-weight: bold;
+        float: right;
+        padding: 1em;
+        color: rgb(148, 148, 148);
+    }
+
+    .detail-text img {
+        height: 2.5em;
+        width: 2.5em;
+        position: absolute;
+        left: 30em;
+    }
+
+    .detail-text a {
+        color: inherit;
+    }
+
+    .detail-text a div {
+        margin-left: 0.5em;
+    }
+
+    .date-label {
+        position: absolute;
+        top: 0;
+        right: 1em;
+        font-weight: bold;
+    }
