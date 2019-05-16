@@ -10,10 +10,10 @@ const ImageModel = {
     projects: [
         require('../images/endless-charts-logo.png'),
         require('../images/hussein-alkasake-logo.png'),
-        require('../images/robot-circuit-board.png'),
-        require('../images/truss-bridge.png'),
-        require('../images/nxt-coin-sorter.png'),
-        require('../images/fuel-cell-car.png')
+        require('../images/robot-circuit-board.jpg'),
+        require('../images/truss-bridge.jpg'),
+        require('../images/nxt-coin-sorter.jpg'),
+        require('../images/fuel-cell-car.jpg')
     ],
     education: [
         require('../images/uw-logo.png'),
