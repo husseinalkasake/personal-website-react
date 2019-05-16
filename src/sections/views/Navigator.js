@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../styles/Navigator.css';
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Route,
   Redirect,
   Switch,

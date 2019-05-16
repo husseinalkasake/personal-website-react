@@ -29,7 +29,7 @@ class SideMenuComponent extends Component {
         }
     }
     linkClasses(tab) {
-        return 'link' + (window.location.pathname.includes(tab) ? ' selected-link' : '');
+        return 'link' + (window.location.hash.includes(tab) ? ' selected-link' : '');
     }
 
     sideMenuStyle() {
