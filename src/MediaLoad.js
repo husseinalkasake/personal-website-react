@@ -7,7 +7,7 @@ const media = {
         require('./images/github-logo-white.png'),
         require('./images/cv-icon.png'),
         require('./images/cv-icon-white.png'),
-        require('./images/hussein-widepic.jpg'),
+        require('./images/hussein-wideshot-cropped.jpg'),
         require('./images/hussein-headshot.jpg'),
         require('./images/globalive_logo.png'),
         require('./images/mhs-logo.png'),

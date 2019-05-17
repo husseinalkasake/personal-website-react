@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Home.css';
 import LogosCard from '../../components/views/LogosCard';
-import getImage from '../../models/ImageModel';
 
 class Home extends Component {
 

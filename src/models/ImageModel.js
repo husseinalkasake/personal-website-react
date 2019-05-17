@@ -1,5 +1,4 @@
 const ImageModel = {
-    home: require('../images/hussein-widepic.jpg'),
     about: require('../images/hussein-headshot.jpg'),
     experience: [ 
         require('../images/globalive_logo.png'),
