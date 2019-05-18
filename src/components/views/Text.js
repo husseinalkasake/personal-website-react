@@ -9,7 +9,7 @@ class Text extends Component{
             textAlign: 'left',
             fontSize: '0.88em',
             fontFamily: this.props.fontfamily,
-            width: window.innerWidth/2 + 'px'
+            width: window.innerWidth / (window.innerWidth <= 640 && this.props.section === 'projectItem' ? 1.2 : 2)
         };
         switch(this.props.section){
             case 'projectItem':
