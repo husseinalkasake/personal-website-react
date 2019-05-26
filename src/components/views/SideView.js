@@ -66,7 +66,7 @@ class SideViewComponent extends Component {
             } else {
                 media.push(
                     <iframe 
-                        width={window.innerWidth / 2}
+                        width={window.innerWidth / (window.innerWidth <= 640 ? 1.2 : 2 )}
                         height={window.innerHeight / 1.5}
                         src={projectVideo.source}
                         frameborder="0"

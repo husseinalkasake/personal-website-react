@@ -112,8 +112,8 @@ const TextModel = {
                 "While the project was more mechanical than software based, alot of software debugging and calibration still went into it to match design constraints. The project was a success as it followed the line perfectly and most of the magnets were detected, earning a near perfect mark. Unfortunately no recording was allowed in the lab session but the finished board with all soldered circuit components is showed below."
             ],
             images: [
-                require('../images/robot-circuit-board-1.png'),
-                require('../images/robot-circuit-board-2.png')
+                require('../images/robot-circuit-board-1.jpg'),
+                require('../images/robot-circuit-board-2.jpg')
             ]
         },{
             title: "3D Truss Bridge",
@@ -130,9 +130,9 @@ const TextModel = {
             ],
             images: [
                 require('../images/truss-bridge-break.gif'),
-                require('../images/truss-bridge-progress.png'),
-                require('../images/truss-bridge-2.png'),
-                require('../images/truss-bridge-aftermath.png')
+                require('../images/truss-bridge-progress.jpg'),
+                require('../images/truss-bridge-2.jpg'),
+                require('../images/truss-bridge-aftermath.jpg')
             ],
             video: {
                 web: true,
@@ -151,9 +151,9 @@ const TextModel = {
                 "The project was mainly mechanical as building the physical hardware was the major challenge. The design was to load each coin on a conveyor belt that moved each coin to the measurement arm. For each coin the measurement arm moves at the same pace. We were able to utilise this design by measuring the time it took for each coin to be pushed into the touch sensor. This gave us a range of values for each size and allowed us to differentiate between sizes of coins. After concluding the size of the coin the wheel then turns to the correct cup by stopping at the right colour (different colour for each size of coin) using a colour sensor. The conveyor belt would then simultaneously move the measured coin into the correct cup and move the next coin to the measurement arm."
             ],
             images: [
-                require('../images/nxt-coin-sorter-1.png'),
-                require('../images/nxt-coin-sorter-2.png'),
-                require('../images/nxt-coin-sorter-3.png')
+                require('../images/nxt-coin-sorter-1.jpg'),
+                require('../images/nxt-coin-sorter-2.jpg'),
+                require('../images/nxt-coin-sorter-3.jpg')
             ]
         },{
             title: "Fuel Cell Car",
@@ -167,7 +167,7 @@ const TextModel = {
                 "Our group designed our own chassis for the car which involved space to hold the fuel cells and water containers. The code was designed to follow lines so the code base could be reused for each course. The project was generally a success as we completed all courses and recieved an award for best design in our class."
             ],
             images: [
-                require('../images/fuel-cell-car.png')
+                require('../images/fuel-cell-car.jpg')
             ]
         }
     ],
