@@ -1,7 +1,6 @@
     .detail-card {
         display: flex;
         margin: 1em;
-        /* min-height: 10em; */
         border-radius: 1em;
         position: relative;
         background-color: rgb(18, 33, 43);
@@ -21,6 +20,7 @@
 
     .detail-card img {
         background-color: inherit;
+        padding-top: 12px;
     }
 
     .detail-text {

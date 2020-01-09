@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/Home.css';
-import LogosCard from '../../components/views/LogosCard';
+import Links from '../../components/views/Links';
 
 class Home extends Component {
 
@@ -9,8 +9,8 @@ class Home extends Component {
             <div className='home-container' style={this.dynamicSize()}>
                 <div className="text-container">
                     <p>Software Developer</p>
-                    <p>MECHATRONICS ENGINEERING</p>
-                    <LogosCard/>
+                    <p className="subheader">MECHATRONICS ENGINEERING</p>
+                    <Links large={true}/>
                 </div>
             </div>
         );

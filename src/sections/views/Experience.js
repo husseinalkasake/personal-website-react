@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
 import '../styles/Experience.css';
+import { experienceCount } from '../../models/TextModel';
 import DetailCard from '../../components/views/DetailCard';
 
 class Experience extends Component {
 
     render(){
-        var cardContainer = {
+        const cardContainer = {
             position: 'absolute',
             bottom: window.innerHeight / 4 + 'px'
         };
+        const experience = [];
+        for(let i = 0; i < experienceCount; i++)
+            experience.push(<DetailCard section='experience' importKey={i}/>);
         return(
             <div className='experience-container' styles={ cardContainer }>
-                <div>
-                    <DetailCard section='experience' importKey={0}/>
-                    <DetailCard section='experience' importKey={1}/>
-                    <DetailCard section='experience' importKey={2}/>
-                    <DetailCard section='experience' importKey={3}/>
-                </div>
+                <div>{ experience }</div>
             </div>
         );
     }

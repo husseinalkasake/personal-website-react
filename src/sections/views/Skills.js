@@ -4,7 +4,7 @@ import '../styles/Skills.css';
 class Skills extends Component {
 
     render(){
-        var cardContainer = {
+        const cardContainer = {
             position: 'absolute',
             bottom: window.innerHeight / 4 + 'px'
         };

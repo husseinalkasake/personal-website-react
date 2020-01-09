@@ -1,0 +1,19 @@
+.links-container {
+    display: flex;
+    justify-content: center;
+}
+
+.links-container img {
+    padding: 1em;
+    border-radius: 0;
+}
+
+.small-image {
+    height: 2em;
+    width: 2em;
+}
+
+.large-image {
+    height: 4em;
+    width: 4em;
+}

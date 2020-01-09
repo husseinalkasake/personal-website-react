@@ -11,18 +11,6 @@
         padding: 0 1em 0 1em;
     }
 
-    .about-container img {
-        padding: 1em;
+    .about-container .mainImage {
         border-radius: 4em;
-    }
-
-    .about-logo-container {
-        display: flex;
-        justify-content: center;
-    }
-    
-    .about-logo-container img {
-        height: 2em;
-        width: 2em;
-        border-radius: 0;
     }

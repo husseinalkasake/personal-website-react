@@ -53,6 +53,9 @@ class DetailCardComponent extends Component {
         }
     }
     dynamicImageWidth () {
+        if(window.innerWidth <= 640) {
+            return window.innerWidth / 1.5;
+        }
         switch(this.props.section) {
             case 'projects':
                 return window.innerWidth / 7;

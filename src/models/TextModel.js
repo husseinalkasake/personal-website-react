@@ -4,12 +4,24 @@ const TextModel = {
     about: {
         header: "Software Developer and Mechatronics Engineering student at the University of Waterloo",
         paragraph: ["Since I was a kid, I've always had a passion for creating. I used to love scribbling random drawings everywhere I could and eventually would start drawing countless floor plans for random building ideas I'd have. And despite how awful all those drawings were in hindsight (definitely not the artist in the family), I loved making them and it fueled my creativity and interest in everything around me from a very young age. By the time I made it to middle and high school, I started gravitating towards how everything around me worked, especially all the technology I was using. This passion for technology people actually use on a daily basis lead me to Engineering.",
-                    "While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey in software development, I was able to learn many different languages and technologies in my 2 years of professional experience. For example, in my last position, I worked on building a utility billing web application using VueJS all the way up to shipping it to users and incrementally improving it in an agile setting. I also have previous experience working on a ReactJS web app as well as a Windows 8 and 10 application from the ground up using C#/Xamarin. In all those projects, I was heavily involved in their planning, development and deployment. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.",
+                    "While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey in software development, I was able to learn many different languages and technologies in my over 2 years of professional experience. For example, in my last position, I fully developed core features for an ecommerce web application using Typescript, Vue, Nuxt, GraphQL & NodeJS within a continuous deployment setting. I also previously worked on a utility billing web application using Vue all the way up to shipping it to users and incrementally improving it in an agile setting. In all my projects, I was heavily involved in the planning, development and deployment. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.",
                     "In most of my experience, I worked on hundreds of bugs and user stories while working within an Agile/Scrum environment and used TFS & Git to manage teamwork and source code accordingly. This showed me the importance of being actively involved in different aspects of the development process, from early design meetings to the very final sprints before deploying the project. In my last position especially, I was heavily involved by participating in biweekly sprint planning sessions, retrospectives, backlog grooming and bug bashes.",
                     "While I'm not working on work or side projects, I really enjoy working on my music production as it remains my main creative outlet nowadays. I make countless hip-hop/R&B/electronic beats as I always obsess over new synths, plug-ins and sounds I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever f ilms/albums that I might've missed during the year."
                 ]
     },
     experience: [
+        {
+            organization: "Hubba",
+            title: "Software Developer",
+            date: "September - December 2019",
+            location: "Toronto, Ontario, Canada",
+            summary: [
+                "Fully developed and shipped core functionality features for an ecommerce web application using Typescript, NodeJS, React, Vue, Nuxt, GraphQL & Apollo Client",
+                "Heavily involved in development of a responsive frontend rewrite using Vue & Nuxt; Modified GraphQL and NodeJS / MongoDB backend so data is handled properly",
+                "Worked within an agile continuous deployment environment by using LaunchDarkly feature flags to confidently roll out new features",
+                "Wrote extensive Jest unit tests and Cypress end to end tests for all new features; Used Percy snapshots to keep track of visual changes"
+            ]
+        },
         {
             organization: "Globalive Technology",
             title: "Software Developer (Frontend)",
@@ -313,5 +325,9 @@ export const getProjectImages = (key = 0) => {
     const project = TextModel.projects[key];
     return (project.images && project.images !== null) ? project.images : null;
 }
+
+export const projectCount = TextModel.projects.length;
+export const experienceCount = TextModel.experience.length;
+export const educationCount = TextModel.education.length;
 
 export default getText;

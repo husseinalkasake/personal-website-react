@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../styles/About.css';
+import Links from '../../components/views/Links';
 import Text from '../../components/views/Text';
 import getImage from '../../models/ImageModel';
 
@@ -10,19 +11,9 @@ class About extends Component {
             <div style={this.dynamicSize()} className='about-container'>
                 <div>
                     <Text fontfamily='Montserrat' section='about'/>
-                    <div className="about-logo-container">
-                        <a target="_blank" href='https://www.linkedin.com/in/hussein-alkasake/'>
-                            <img src={require('../../images/linkedin-logo-white.png')}/>
-                        </a>
-                        <a target="_blank" href='https://github.com/husseinalkasake'>
-                            <img src={require('../../images/github-logo-white.png')}/>
-                        </a>
-                        <a target="_blank" href='https://drive.google.com/file/d/1dnkRJBeu8RrL0Ov_-HGme0dIk_IIyaOD'>
-                            <img src={require('../../images/cv-icon-white.png')}/>
-                        </a>
-                    </div>
+                    <Links whiteLogo={true}/>
                 </div>
-                <img src={ getImage('about')} height={this.dynamicImageHeight()} width={this.dynamicImageWidth()}/>
+                <img className="mainImage" src={ getImage('about')} height={this.dynamicImageHeight()} width={this.dynamicImageWidth()}/>
             </div>
         );
     }

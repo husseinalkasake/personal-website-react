@@ -18,6 +18,10 @@
         font-family: 'TypoGraphica';
     }
 
+    .home-container .subheader {
+        font-size: 2.5em;
+    }
+
     .text-container {
         justify-content: center;
     }

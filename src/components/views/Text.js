@@ -5,9 +5,10 @@ import getText from '../../models/TextModel';
 class Text extends Component{
 
     render(){
-        let styles = {
+        const styles = {
             textAlign: 'left',
             fontSize: '0.88em',
+            paddingBottom: 12,
             fontFamily: this.props.fontfamily,
             width: window.innerWidth / (window.innerWidth <= 640 && this.props.section === 'projectItem' ? 1.2 : 2)
         };
