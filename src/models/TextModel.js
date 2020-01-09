@@ -54,10 +54,10 @@ const TextModel = {
             date: "January - April 2016",
             location: "Toronto, Ontario, Canada",
             summary: [
-                "Developed native iOS traffic analysis application for traffic count surveys using Objective C.",
-                "Added new traffic count speed control feature to existing iOS traffic count app that wirelessly syncs with Windows VLC media player.",
-                "Updated existing company applications with requested interface features by co-workers and traffic surveyors.",
-                "Resolved app bugs that occurred to traffic surveyors during active studies to ensure all collected site data can be obtained and uploaded to company server as soon as possible."
+                "Developed native iOS traffic analysis application for traffic count surveys using Objective C",
+                "Added new traffic count speed control feature to existing iOS traffic count app that wirelessly syncs with Windows VLC media player",
+                "Updated existing company applications with requested interface features by co-workers and traffic surveyors",
+                "Resolved app bugs that occurred to traffic surveyors during active studies to ensure all collected site data can be obtained and uploaded to company server as soon as possible"
             ]
         }
     ],
