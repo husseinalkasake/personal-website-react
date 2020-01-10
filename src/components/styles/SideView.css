@@ -5,7 +5,12 @@
     z-index: 2;
     padding: 1em;
     color: white;
-    overflow: auto;
+    overflow: scroll;
+}
+
+/* remove scrollbar */
+.side-view::-webkit-scrollbar {
+    width: 0px;
 }
 
 .side-view-title {
