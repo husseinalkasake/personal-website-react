@@ -4,13 +4,19 @@
         justify-content: center;
         align-content: center;
         font-family: 'Montserrat';
+        position: relative;
     }
 
     .about-container p {
         font-size: 1em;
+        color: white;
         padding: 0 1em 0 1em;
     }
 
     .about-container .mainImage {
         border-radius: 4em;
+    }
+    
+    .about-inner-container {
+        margin-top: 114px;
     }

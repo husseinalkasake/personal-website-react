@@ -3,6 +3,11 @@
         padding-top: 12px;
         align-items: center;
         justify-content: center;
+        position: relative;
+    }
+
+    .experience-inner-container {
+        margin-top: 114px;
     }
     
 

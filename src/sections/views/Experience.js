@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import '../styles/Experience.css';
+import '../../styles/App.css';
 import { experienceCount } from '../../models/TextModel';
 import DetailCard from '../../components/views/DetailCard';
+import SectionHeader from '../../components/views/SectionHeader';
 
 class Experience extends Component {
 
@@ -14,8 +16,9 @@ class Experience extends Component {
         for(let i = 0; i < experienceCount; i++)
             experience.push(<DetailCard section='experience' importKey={i}/>);
         return(
-            <div className='experience-container' styles={ cardContainer }>
-                <div>{ experience }</div>
+            <div className='experience-container' id="experience" styles={ cardContainer }>
+                <SectionHeader text="Experience" />
+                <div className="inner-container">{ experience }</div>
             </div>
         );
     }

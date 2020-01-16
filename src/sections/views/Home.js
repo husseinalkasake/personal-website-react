@@ -6,7 +6,7 @@ class Home extends Component {
 
     render(){
         return(
-            <div className='home-container' style={this.dynamicSize()}>
+            <div className='home-container' style={this.dynamicSize()} id="home">
                 <div className="text-container">
                     <p>Software Developer</p>
                     <p className="subheader">MECHATRONICS ENGINEERING</p>

@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../styles/SideMenu.css';
-import { Link } from "react-router-dom";
 import { connect } from 'react-redux';
 import { showSideMenu, closeMenus } from '../../redux/actions';
 
@@ -14,9 +13,9 @@ class SideMenuComponent extends Component {
             const menuTabs = [];
             tabs.map(tab => {
                 menuTabs.push(
-                    <Link className={this.linkClasses(tab)} to={'/' + tab} onClick={()=> this.props.closeMenus()}>
+                    <span className={this.linkClasses(tab)} to={'/' + tab} onClick={()=> this.scrollToPosition(tab)}>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                    </Link>
+                    </span>
                 );
             });
             return(
@@ -37,6 +36,12 @@ class SideMenuComponent extends Component {
             width: window.innerWidth / 3 + 'px',
             height: window.innerHeight + 'px'
         }
+    }
+
+    scrollToPosition(tab) {
+        const el = document.querySelector(`#${tab}`);
+        el && el.scrollIntoView({ behavior: 'smooth' });
+        this.props.closeMenus();
     }
 }
 

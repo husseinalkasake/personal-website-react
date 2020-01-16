@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import '../styles/NavHeader.css';
 import CustomIcon from './CustomIcon';
 import { connect } from 'react-redux';
@@ -13,9 +12,9 @@ class NavHeaderComponent extends Component {
             header.push(this.homeTab());
             tabs.map(tab => {
                 header.push(
-                    <Link className='link' to={'/' + tab}>
+                    <span className='link' to={'/' + tab} onClick={(e) => { e.stopPropagation(); this.scrollToPosition(tab); } }>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                    </Link>
+                    </span>
                 );
             });
         } else { // mobile
@@ -38,10 +37,15 @@ class NavHeaderComponent extends Component {
 
     homeTab() {
         return(
-            <Link className='link' to='/home'>
+            <span className='link' to='/home' onClick={(e) => { e.stopPropagation(); this.scrollToPosition('home'); } }>
                 <a className="home-link" style={{fontSize: window.innerWidth <= 900 ? '1.5em' : '2.25em'}}>Hussein Alkasake</a>
-            </Link>
+            </span>
         );
+    }
+
+    scrollToPosition(tab) {
+        const el = document.querySelector(`#${tab}`);
+        el && el.scrollIntoView({ behavior: 'smooth' });
     }
 }
 

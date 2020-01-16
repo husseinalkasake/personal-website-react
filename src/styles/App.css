@@ -20,6 +20,17 @@ html, body {
   padding-right: 24px;
 }
 
+.inner-container {
+  /* @media only screen and (max-width: 992px) {
+    margin-top: 60px;
+    margin-bottom: 12px;
+  } */
+
+  margin-top: 114px;
+  margin-bottom: 48px;
+
+}
+
 -webkit-scrollbar { width: 0 !important }
 
 @keyframes App-logo-spin {

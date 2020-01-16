@@ -26,6 +26,7 @@
       align-content: right;
       text-decoration: none;
       background-color: transparent;
+      cursor: pointer;
     }
     
   .link:hover{
