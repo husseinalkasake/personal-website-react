@@ -27,3 +27,24 @@
 .text-container {
     justify-content: center;
 }
+
+.down {
+    position: absolute;
+    cursor: pointer;
+    bottom: 10%;
+    font-size: 6em;
+    margin-left: -32px;
+}
+
+/* mobile */
+@media (max-width: 640px) {
+    .home-container {
+        flex-direction: column-reverse;
+    }
+
+    .down {
+        bottom: 5%;
+        font-size: 3em;
+        margin-left: -16px;
+    }
+}

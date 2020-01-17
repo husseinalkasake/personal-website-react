@@ -17,6 +17,8 @@
     border-radius: 4em;
 }
 
-.about-inner-container {
-    margin-top: 114px;
+@media (max-width: 640px) {
+    .about-container {
+        flex-direction: column-reverse;
+    }
 }

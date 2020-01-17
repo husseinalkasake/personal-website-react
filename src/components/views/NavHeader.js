@@ -3,6 +3,7 @@ import '../styles/NavHeader.css';
 import CustomIcon from './CustomIcon';
 import { connect } from 'react-redux';
 import { showSideMenu } from '../../redux/actions';
+import scrollToTab from '../../utils/scrollToTab';
 
 class NavHeaderComponent extends Component {
     render() {
@@ -15,7 +16,7 @@ class NavHeaderComponent extends Component {
                         className='link'
                         onClick={e => {
                             e.stopPropagation();
-                            this.scrollToPosition(tab);
+                            scrollToTab(tab);
                         }}>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </span>
@@ -48,16 +49,11 @@ class NavHeaderComponent extends Component {
                 }}
                 onClick={e => {
                     e.stopPropagation();
-                    this.scrollToPosition('home');
+                    scrollToTab('home');
                 }}>
                 Hussein Alkasake
             </span>
         );
-    }
-
-    scrollToPosition(tab) {
-        const el = document.querySelector(`#${tab}`);
-        el && el.scrollIntoView({ behavior: 'smooth' });
     }
 }
 

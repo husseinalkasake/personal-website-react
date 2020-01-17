@@ -91,7 +91,6 @@ class DetailCardComponent extends Component {
     }
     dynamicStyle() {
         let height = '10em';
-        let flex = window.innerWidth <= 640 ? 'column' : 'row';
         switch (this.props.section) {
             case 'education':
                 height = '20em';
@@ -99,7 +98,7 @@ class DetailCardComponent extends Component {
             default:
                 break;
         }
-        return { minHeight: height, flexDirection: flex };
+        return { minHeight: height };
     }
 }
 

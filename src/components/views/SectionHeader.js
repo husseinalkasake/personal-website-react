@@ -1,22 +1,10 @@
 import React, { Component } from 'react';
+import '../styles/SectionHeader.css';
 
-class About extends Component {
+class SectionHeader extends Component {
     render() {
-        return <div style={this.style()}>{this.props.text}</div>;
+        return <div className='section-header'>{this.props.text}</div>;
     }
-
-    style = () => {
-        return {
-            alignItems: 'center',
-            color: 'white',
-            fontSize: window.innerWidth < 640 ? '2em' : '4em',
-            fontWeight: 600,
-            position: 'absolute',
-            left: '24px',
-            top: '0px',
-            fontFamily: 'Montserrat'
-        };
-    };
 }
 
-export default About;
+export default SectionHeader;

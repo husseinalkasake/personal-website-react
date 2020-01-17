@@ -4,6 +4,7 @@ import getText from '../../models/TextModel';
 
 class Text extends Component {
     render() {
+        const isMobile = window.innerWidth <= 640;
         const styles = {
             textAlign: 'left',
             fontSize: '0.88em',
@@ -11,17 +12,14 @@ class Text extends Component {
             fontFamily: this.props.fontfamily,
             width:
                 window.innerWidth /
-                (window.innerWidth <= 640 &&
-                this.props.section === 'projectItem'
-                    ? 1.2
-                    : 2)
+                (isMobile && this.props.section === 'projectItem' ? 1.2 : 2)
         };
         switch (this.props.section) {
             case 'projectItem':
                 styles.lineHeight = 2;
                 break;
             case 'about':
-                styles.width = window.innerWidth / 1.2;
+                styles.width = window.innerWidth / 1.3;
                 break;
             default:
                 break;

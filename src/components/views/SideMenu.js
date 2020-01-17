@@ -3,6 +3,7 @@ import '../styles/SideMenu.css';
 import { connect } from 'react-redux';
 import { closeMenus } from '../../redux/actions';
 import CustomIcon from './CustomIcon';
+import scrollToTab from '../../utils/scrollToTab';
 
 class SideMenuComponent extends Component {
     render() {
@@ -16,7 +17,7 @@ class SideMenuComponent extends Component {
                         className={this.linkClasses(tab)}
                         onClick={e => {
                             e.stopPropagation();
-                            this.scrollToPosition(tab);
+                            this.goToTab(tab);
                         }}>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </span>
@@ -42,9 +43,8 @@ class SideMenuComponent extends Component {
         );
     }
 
-    scrollToPosition(tab) {
-        const el = document.querySelector(`#${tab}`);
-        el && el.scrollIntoView({ behavior: 'smooth' });
+    goToTab(tab) {
+        scrollToTab(tab);
         this.props.closeMenus();
     }
 }
