@@ -1,13 +1,8 @@
 import React, { Component } from 'react';
 
 class About extends Component {
-
-    render(){
-        return(
-            <div style={this.style()}>
-                { this.props.text }
-            </div>
-        );
+    render() {
+        return <div style={this.style()}>{this.props.text}</div>;
     }
 
     style = () => {
@@ -20,9 +15,8 @@ class About extends Component {
             left: '24px',
             top: '0px',
             fontFamily: 'Montserrat'
-        }
-    }
+        };
+    };
 }
-
 
 export default About;

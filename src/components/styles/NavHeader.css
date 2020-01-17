@@ -1,46 +1,47 @@
-  .nav-header {
-      padding-top: 12px;
-      padding-bottom: 12px;
-      text-align: center;
-      text-decoration:none;
-      align-content: center;
-      font-family: 'Montserrat';
-      font-weight: bold;
-      position: sticky;
-      z-index: 1;
-      top: 0px;
-      background-color: black;
-  }
+.nav-header {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: center;
+    text-decoration: none;
+    align-content: center;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    position: sticky;
+    z-index: 1;
+    top: 0px;
+    background-color: black;
+}
 
-  .home-link {
-      font-family: 'GreatDay';
-      font-weight: 500;
-      color: #6f8ebf;
-  }
+.home-link {
+    font-family: 'GreatDay';
+    font-weight: 500;
+    color: #6f8ebf;
+    cursor: pointer;
+}
 
-  .link {
-      padding: 2%;
-      color: white;
-      margin-left: 2%;
-      padding-left: 2%;
-      align-content: right;
-      text-decoration: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
-    
-  .link:hover{
-      color: #6f8ebf;
-  }
+.link {
+    padding: 2%;
+    color: white;
+    margin-left: 2%;
+    padding-left: 2%;
+    align-content: right;
+    text-decoration: none;
+    background-color: transparent;
+    cursor: pointer;
+}
 
-  div a {
+.link:hover {
+    color: #6f8ebf;
+}
+
+div a {
     color: black;
-    text-decoration:none;
-  }
+    text-decoration: none;
+}
 
-  .bars {
+.bars {
     color: #6f8ebf;
     position: absolute;
     left: 1em;
     padding: 1em;
-  }
+}

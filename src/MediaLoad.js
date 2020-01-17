@@ -31,25 +31,19 @@ const media = {
         require('./images/nxt-coin-sorter-3.jpg'),
         require('./images/fuel-cell-car.jpg')
     ],
-    videos: [
-        require('./images/endless-charts.mp4')
-    ]
+    videos: [require('./images/endless-charts.mp4')]
 };
 
 class MediaLoad extends Component {
     render() {
         const mediaLoad = [];
         media.images.forEach(image => {
-            mediaLoad.push(<img src={image}/>);
+            mediaLoad.push(<img alt='' src={image} />);
         });
         media.videos.forEach(video => {
-            mediaLoad.push(<video src={video}/>);
+            mediaLoad.push(<video src={video} />);
         });
-        return(
-            <div style={{display: 'none'}}>
-                { mediaLoad }
-            </div>
-        );
+        return <div style={{ display: 'none' }}>{mediaLoad}</div>;
     }
 }
 

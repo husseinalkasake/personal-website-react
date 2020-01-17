@@ -1,41 +1,45 @@
 import React, { Component } from 'react';
 import '../styles/SideMenu.css';
 import { connect } from 'react-redux';
-import { showSideMenu, closeMenus } from '../../redux/actions';
+import { closeMenus } from '../../redux/actions';
+import CustomIcon from './CustomIcon';
 
 class SideMenuComponent extends Component {
-
     render() {
         if (!this.props.showSideMenu) {
-            return(null);
-        }
-        else {
+            return null;
+        } else {
             const menuTabs = [];
-            tabs.map(tab => {
+            tabs.forEach(tab => {
                 menuTabs.push(
-                    <span className={this.linkClasses(tab)} to={'/' + tab} onClick={()=> this.scrollToPosition(tab)}>
+                    <span
+                        className={this.linkClasses(tab)}
+                        onClick={e => {
+                            e.stopPropagation();
+                            this.scrollToPosition(tab);
+                        }}>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
                     </span>
                 );
             });
-            return(
-                <div className='side-menu' style={this.sideMenuStyle()}>
-                    <div className='side-menu-body'>
-                        {menuTabs}
-                    </div>
+            return (
+                <div
+                    className='side-menu'
+                    onClick={e => {
+                        e.stopPropagation();
+                        this.props.closeMenus();
+                    }}>
+                    <CustomIcon name='times' size='2x' className='close' />
+                    <div className='side-menu-body'>{menuTabs}</div>
                 </div>
             );
         }
     }
     linkClasses(tab) {
-        return 'link' + (window.location.hash.includes(tab) ? ' selected-link' : '');
-    }
-
-    sideMenuStyle() {
-        return {
-            width: window.innerWidth / 3 + 'px',
-            height: window.innerHeight + 'px'
-        }
+        return (
+            'link' +
+            (window.location.hash.includes(tab) ? ' selected-link' : '')
+        );
     }
 
     scrollToPosition(tab) {
@@ -45,12 +49,7 @@ class SideMenuComponent extends Component {
     }
 }
 
-const tabs = [
-    'about',
-    'experience',
-    'projects',
-    'education'
-];
+const tabs = ['about', 'experience', 'projects', 'education'];
 
 const mapStateToProps = state => ({
     showSideMenu: state.showSideMenu
@@ -60,5 +59,8 @@ const mapDispatchToProps = dispatch => ({
     closeMenus: () => dispatch(closeMenus())
 });
 
-const SideMenu = connect(mapStateToProps, mapDispatchToProps)(SideMenuComponent);
+const SideMenu = connect(
+    mapStateToProps,
+    mapDispatchToProps
+)(SideMenuComponent);
 export default SideMenu;
