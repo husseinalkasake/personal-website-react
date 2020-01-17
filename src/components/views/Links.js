@@ -30,7 +30,7 @@ export default class Links extends Component {
                 <a
                     target='_blank'
                     rel='noopener noreferrer'
-                    href='https://drive.google.com/file/d/1dnkRJBeu8RrL0Ov_-HGme0dIk_IIyaOD'>
+                    href='https://drive.google.com/file/d/1CNWAo0t0i0hyGK5XRPBPXN4Vo9z0SHc7'>
                     <img
                         alt=''
                         className={imageSize}
