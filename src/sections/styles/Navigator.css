@@ -1,13 +1,13 @@
-    .nav-container {
-        flex-wrap: wrap;
-        flex-direction: column;
-        justify-content: center;
-        background-color: black;
-    }
+.nav-container {
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    background-color: black;
+}
 
-    .nav-body {
-        color: white;
-        overflow: hidden;
-        text-align: center;
-        flex-direction: column;
-    }
+.nav-body {
+    color: white;
+    overflow: hidden;
+    text-align: center;
+    flex-direction: column;
+}

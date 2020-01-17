@@ -12,17 +12,18 @@ import { connect } from 'react-redux';
 import { closeMenus } from '../../redux/actions';
 
 class NavigatorComponent extends Component {
-
-    render(){
-        return(
+    render() {
+        return (
             <div>
-                <SideView/>
-                <SideMenu/>
-                <div className='nav-container' onClick={()=> this.props.closeMenus()}>
-                    <div className="nav-body">
+                <SideView />
+                <SideMenu />
+                <div
+                    className='nav-container'
+                    onClick={() => this.props.closeMenus()}>
+                    <div className='nav-body'>
                         <Home />
                     </div>
-                    <NavHeader/>
+                    <NavHeader />
                     <About />
                     <Experience />
                     <Projects />
@@ -32,11 +33,10 @@ class NavigatorComponent extends Component {
         );
     }
 }
-  
+
 const mapDispatchToProps = dispatch => ({
     closeMenus: () => dispatch(closeMenus())
 });
 
 const Navigator = connect(null, mapDispatchToProps)(NavigatorComponent);
 export default Navigator;
-
