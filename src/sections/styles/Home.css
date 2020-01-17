@@ -32,8 +32,8 @@
     position: absolute;
     cursor: pointer;
     bottom: 10%;
-    font-size: 6em;
-    margin-left: -32px;
+    font-size: 4em;
+    margin-left: -24px;
 }
 
 /* mobile */
@@ -43,7 +43,7 @@
     }
 
     .down {
-        bottom: 5%;
+        bottom: 12px;
         font-size: 3em;
         margin-left: -16px;
     }
