@@ -6,6 +6,6 @@ The purpose of the project was to create a simple portfolio showcasing my person
 
 To properly organize the application, it was important to seperate it into different layers. The views layer contains the container components for the different sections of the website (About, Experience, Projects, etc..). The components layer contains smaller reusable components such as the main card used throughout to display information. The models layer contains the Text and Image models where the entire application pulls resources from. The final layer is the redux layer which holds the redux store, reducers and actions to manage the app's state. This ensures the entire application deals with a single, immutable source of truth.
 
-As far as third party libraries goes, the main ones used are React-Router to manage the navigation between different sections shown and Redux to manage the application's state.
+As far as third party libraries goes, the main one is Redux to manage the application's state.
 
 Currently the project is auto deployed using [Heroku](http://heroku.com/). A [backend](https://github.com/husseinalkasake/personal-website-graphql) was created for this project using Go and GraphQL and is in the process of being deployed.

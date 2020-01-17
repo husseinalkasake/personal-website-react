@@ -1,57 +1,64 @@
 import React, { Component } from 'react';
-import { Link } from "react-router-dom";
 import '../styles/NavHeader.css';
 import CustomIcon from './CustomIcon';
 import { connect } from 'react-redux';
 import { showSideMenu } from '../../redux/actions';
+import scrollToTab from '../../utils/scrollToTab';
 
 class NavHeaderComponent extends Component {
-
-    render(){
+    render() {
         const header = [];
         if (window.innerWidth > 640) {
             header.push(this.homeTab());
-            tabs.map(tab => {
+            tabs.forEach(tab => {
                 header.push(
-                    <Link className='link' to={'/' + tab}>
+                    <span
+                        className='link'
+                        onClick={e => {
+                            e.stopPropagation();
+                            scrollToTab(tab);
+                        }}>
                         {tab.charAt(0).toUpperCase() + tab.slice(1)}
-                    </Link>
+                    </span>
                 );
             });
-        } else { // mobile
+        } else {
+            // mobile
             header.push(
                 <CustomIcon
-                    name="bars"
-                    className="bars"
-                    onClick={(e)=> {e.stopPropagation(); this.props.showSideMenu()}}
+                    name='bars'
+                    className='bars'
+                    onClick={e => {
+                        e.stopPropagation();
+                        this.props.showSideMenu();
+                    }}
                 />
             );
             header.push(this.homeTab());
         }
 
-        return(
-            <div className='nav-header'>
-                {header}
-            </div>
-        );
+        return <div className='nav-header'>{header}</div>;
     }
 
     homeTab() {
-        return(
-            <Link className='link' to='/home'>
-                <a className="home-link" style={{fontSize: window.innerWidth <= 900 ? '1.5em' : '2.25em'}}>Hussein Alkasake</a>
-            </Link>
+        return (
+            <span
+                className='home-link'
+                style={{
+                    fontSize: window.innerWidth <= 900 ? '1.5em' : '2.25em'
+                }}
+                onClick={e => {
+                    e.stopPropagation();
+                    scrollToTab('home');
+                }}>
+                Hussein Alkasake
+            </span>
         );
     }
 }
 
-const tabs = [
-    'about',
-    'experience',
-    'projects',
-    'education'
-];
-  
+const tabs = ['about', 'experience', 'projects', 'education'];
+
 const mapDispatchToProps = dispatch => ({
     showSideMenu: showMenu => dispatch(showSideMenu(showMenu))
 });
@@ -59,4 +66,3 @@ const mapDispatchToProps = dispatch => ({
 const NavHeader = connect(null, mapDispatchToProps)(NavHeaderComponent);
 
 export default NavHeader;
-

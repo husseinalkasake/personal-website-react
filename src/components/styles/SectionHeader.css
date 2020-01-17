@@ -1,0 +1,17 @@
+.section-header {
+    align-items: center;
+    color: white;
+    font-size: 56px;
+    font-weight: 600;
+    position: absolute;
+    left: 24px;
+    top: 0px;
+    font-family: 'Montserrat';
+}
+
+/* mobile */
+@media (max-width: 992px) {
+    .section-header {
+        font-size: 2em;
+    }
+}

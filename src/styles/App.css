@@ -1,40 +1,64 @@
-
 .app-container {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  overflow: auto;
-  background-color: black;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    background-color: black;
 }
 
-html, body {
-  width: 100%;
-  height: 100%;
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+html {
+    overflow: auto;
 }
 
 #root {
-  height: 100%;
+    height: 100%;
 }
 
 .pr24 {
-  padding-right: 24px;
+    padding-right: 24px;
 }
 
--webkit-scrollbar { width: 0 !important }
+.inner-container {
+    margin-top: 114px;
+    margin-bottom: 24px;
+}
+
+/* mobile */
+@media (max-width: 992px) {
+    .inner-container {
+        margin-top: 60px;
+        margin-bottom: 12px;
+    }
+}
+
+-webkit-scrollbar {
+    width: 0 !important;
+}
 
 @keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 @font-face {
-  font-family: 'GreatDay';
-  src: local('GreatDay'), url('./fonts/Great-Day-Personal-Use.ttf') format('truetype');
+    font-family: 'GreatDay';
+    src: local('GreatDay'),
+        url('./fonts/Great-Day-Personal-Use.ttf') format('truetype');
 }
 
 @font-face {
-  font-family: 'TypoGraphica';
-  src: local('TypoGraphica'), url('./fonts/TypoGraphica.otf') format('opentype');
+    font-family: 'TypoGraphica';
+    src: local('TypoGraphica'),
+        url('./fonts/TypoGraphica.otf') format('opentype');
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat');

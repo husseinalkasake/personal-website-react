@@ -11,39 +11,65 @@ import { connect } from 'react-redux';
 import { updateMoreInfoKey } from '../../redux/actions';
 
 class DetailCardComponent extends Component {
-
-    render(){
+    render() {
         const dateLabel = [];
         const moreInfo = [];
         if (this.props.section === 'projects') {
-            dateLabel.push(<p className="date-label">{getProjectDate(this.props.importKey)}</p>);
+            dateLabel.push(
+                <p className='date-label'>
+                    {getProjectDate(this.props.importKey)}
+                </p>
+            );
             if (projectHasMoreInfo(this.props.importKey)) {
-                moreInfo.push(<CustomButton text="MORE INFO" onClick={() => this.props.updateMoreInfoKey(this.props.importKey)}/>);
+                moreInfo.push(
+                    <CustomButton
+                        text='MORE INFO'
+                        onClick={() =>
+                            this.props.updateMoreInfoKey(this.props.importKey)
+                        }
+                    />
+                );
             }
             const projectSource = getProjectSource(this.props.importKey);
             if (projectSource !== null) {
-                moreInfo.push(<a target="_blank" href={projectSource}><CustomButton text="View on Github"/></a>);
+                moreInfo.push(
+                    <a
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        href={projectSource}>
+                        <CustomButton text='View on Github' />
+                    </a>
+                );
             }
         }
-        return(
-            <div className="detail-card" style={this.dynamicStyle()}>
-                { dateLabel }
-                <div className="card-content">
-                    <div className="image-container">
-                        <Image src={`${ getImage(this.props.section, this.props.importKey) }`} height={this.dynamicImageHeight()} width={this.dynamicImageWidth()}/>
+        return (
+            <div className='detail-card' style={this.dynamicStyle()}>
+                {dateLabel}
+                <div className='card-content'>
+                    <div className='image-container'>
+                        <Image
+                            src={`${getImage(
+                                this.props.section,
+                                this.props.importKey
+                            )}`}
+                            height={this.dynamicImageHeight()}
+                            width={this.dynamicImageWidth()}
+                        />
                     </div>
-                    <div className="detail-text">
-                        <Text fontfamily='Montserrat' section={this.props.section} importKey={this.props.importKey}/>
-                        <div>
-                        { moreInfo }
-                        </div>
+                    <div className='detail-text'>
+                        <Text
+                            fontfamily='Montserrat'
+                            section={this.props.section}
+                            importKey={this.props.importKey}
+                        />
+                        <div>{moreInfo}</div>
                     </div>
                 </div>
             </div>
         );
     }
-    dynamicImageHeight () {
-        switch(this.props.section) {
+    dynamicImageHeight() {
+        switch (this.props.section) {
             case 'education':
                 return window.innerHeight / 3;
             case 'projects':
@@ -52,20 +78,19 @@ class DetailCardComponent extends Component {
                 return window.innerHeight / 5;
         }
     }
-    dynamicImageWidth () {
-        if(window.innerWidth <= 640) {
+    dynamicImageWidth() {
+        if (window.innerWidth <= 640) {
             return window.innerWidth / 1.5;
         }
-        switch(this.props.section) {
+        switch (this.props.section) {
             case 'projects':
                 return window.innerWidth / 7;
             default:
                 return window.innerWidth / 6;
         }
     }
-    dynamicStyle () {
+    dynamicStyle() {
         let height = '10em';
-        let flex = window.innerWidth <= 640 ? 'column' : 'row';
         switch (this.props.section) {
             case 'education':
                 height = '20em';
@@ -73,12 +98,12 @@ class DetailCardComponent extends Component {
             default:
                 break;
         }
-        return { minHeight: height, flexDirection: flex };
+        return { minHeight: height };
     }
-};
-  
+}
+
 const mapDispatchToProps = dispatch => ({
-    updateMoreInfoKey: (key) => dispatch(updateMoreInfoKey(key))
+    updateMoreInfoKey: key => dispatch(updateMoreInfoKey(key))
 });
 
 const DetailCard = connect(null, mapDispatchToProps)(DetailCardComponent);

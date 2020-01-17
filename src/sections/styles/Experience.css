@@ -1,9 +1,7 @@
-    .experience-container {
-        display: flex;
-        padding-top: 12px;
-        align-items: center;
-        justify-content: center;
-    }
-    
-
-    
+.experience-container {
+    display: flex;
+    padding-top: 12px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}

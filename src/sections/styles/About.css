@@ -1,16 +1,24 @@
+.about-container {
+    display: flex;
+    margin: 2em 1em 1em 1em;
+    justify-content: center;
+    align-content: center;
+    font-family: 'Montserrat';
+    position: relative;
+}
+
+.about-container p {
+    font-size: 1em;
+    color: white;
+    padding: 0 1em 0 1em;
+}
+
+.about-container .mainImage {
+    border-radius: 4em;
+}
+
+@media (max-width: 640px) {
     .about-container {
-        display: flex;
-        margin: 1em;
-        justify-content: center;
-        align-content: center;
-        font-family: 'Montserrat';
+        flex-direction: column-reverse;
     }
-
-    .about-container p {
-        font-size: 1em;
-        padding: 0 1em 0 1em;
-    }
-
-    .about-container .mainImage {
-        border-radius: 4em;
-    }
+}
