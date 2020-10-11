@@ -13,6 +13,18 @@ const TextModel = {
     },
     experience: [
         {
+            organization: 'Ubisoft',
+            title: 'Software Developer',
+            date: 'January - April 2020',
+            location: 'Toronto, Ontario, Canada',
+            summary: [
+                'Heavily involved in the developement of a motion capture software solution using a .NET (WPF) frontend & Python backend',
+                'Took ownership of major full-stack features and participated in regular software architecture discussions and code reviews witin an agile setting',
+                'Quickly developed a facial motion capture solution (using a Python service and a WPF frontend) to meet sudden social distancing requirements',
+                'Wrote extensive Pytest backend and XUnit frontend unit and integration tests to ensure feature functionality throughout development'
+            ]
+        },
+        {
             organization: 'Hubba',
             title: 'Software Developer',
             date: 'September - December 2019',
@@ -77,6 +89,20 @@ const TextModel = {
     ],
     projects: [
         {
+            title: 'Backyarders',
+            subtitle: 'Home Workout Application',
+            date: '2020',
+            summary: [
+                'Cross-platform mobile application for iOS and Android built with React Native',
+                'Provides users of all backgrounds with a customized home workout schedule (with videos for each workout) as well as a food plan with calorie count',
+            ],
+            moreInfo: [
+                'More Info'
+            ],
+            source: 'https://github.com/husseinalkasake/backyarders',
+            deploymentLink: 'https://play.google.com/store/apps/details?id=com.backyarders.backyarders'
+        },
+        {
             title: 'Personal Website Backend',
             subtitle: 'Go GraphQL Backend for this website :)',
             date: '2019',
@@ -98,9 +124,7 @@ const TextModel = {
             date: '2019',
             summary: [
                 'Cross-platform mobile application currently building for Android using React Native',
-                'Supports the ability to search for albums, view details, choose favorites and create simple lists',
-                'Uses React Router for navigation and Axios for REST API calls; Last.fm API used to populate app data',
-                'Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management'
+                'Supports the ability to search for albums, view details, choose favorites and create simple lists'
             ],
             moreInfo: [
                 'The purpose of this project is to build a music album chart/list creating mobile application. The project is inspired by popular chart rendering tools such as Neverending Charts which allow users to create drag and drop charts of their favorite albums and movies. It is currently being built for Android and will allow users to search and favorite albums as well as adding them to their own shareable drag and drop lists.',
@@ -119,8 +143,7 @@ const TextModel = {
             date: '2018',
             summary: [
                 'Simple Personal Portfolio Website to highlight personal skills and experience',
-                'Front-end based web app built using ReactJS to create clean, reusable components',
-                'Dynamically scale images and cards and use flexbox to ensure responsive design'
+                'Front-end based web app built using ReactJS to create clean, reusable components'
             ],
             moreInfo: [
                 'The purpose of the project was to create a simple portfolio showcasing my personal skills and experience gained throughout my career. Considering that the website would basically just display text and images, no backend felt like it was needed. I initially thought to use vanilla JS/HTML/CSS, but I eventually decided to go with using ReactJS for the frontend. While it can be argued that React is sort of overkill in this case due to the simplicity of the project, reusability is a big advantage to the component-based approach React takes which makes updating the website with recent experience very simple and ensures consistency throughout the application.',
@@ -133,10 +156,9 @@ const TextModel = {
             title: 'Magnet detecting line following robot',
             date: '2018',
             summary: [
-                'Built a line following and magnet detecting robot using programmable circuit board and motors',
+                'Built a line following and magnet detecting robot using a programmable circuit board and motors',
                 'Soldered circuit components onto PCB following circuit schematics',
-                'Wrote and debugged magnet detecting and line following algorithms using C',
-                'Configured tolerances of magentic and light detecting sensors through rigorous testing'
+                'Wrote and debugged magnet detecting and line following algorithms using C as well as configured sensors accordingly'
             ],
             moreInfo: [
                 'This project was a term long project for our 2nd year Circuits course that was done over 10 lab sessions. The project involved analyzing circuit schematics, writing and flashing C alogirthms and manually soldering components onto a programmable circuit board accordingly.',
@@ -153,9 +175,7 @@ const TextModel = {
             date: '2017',
             summary: [
                 'Designed and built 3D Truss Bridge using stress and force analysis as well as AutoCAD skills',
-                'Created and analyzed multiple bridge designs using force analysis and engineering skills',
-                'Designed all required pieces using AutoCAD; Created them using laser cutter',
-                'Tested multiple versions of design with loads; Analyzed failures to improve design'
+                'Created and analyzed multiple bridge designs using force analysis and engineering skills'
             ],
             moreInfo: [
                 'This project was for our 2nd year material design course where we had to design a truss bridge that can hold as many weights as possible before breaking. The bridge was designed using AutoCAD and built using laser cut wooden pieces. Force and stress analysis was used to predict and improve bridge designs as well as a couple of test runs with weights.',
@@ -177,8 +197,7 @@ const TextModel = {
             title: 'NXT Coin Sorter',
             date: '2016',
             summary: [
-                'Worked as a team to design, build and code a Coin Sorting robot using a Lego Mindstorm kit',
-                'Build the mechanical design to turn circular motion of a motor to linear motion, pushing each coin towards a touch sensor to measure their diameters',
+                'Worked within a team to design, build and code (using C++) a Coin Sorting robot using a Lego Mindstorm kit',
                 'Completed, tested and debugged the C++ code to operate the mechanical system efficiently'
             ],
             moreInfo: [
@@ -333,6 +352,11 @@ export const getProjectSource = (key = 0) => {
     const project = TextModel.projects[key];
     return project.source && project.source !== null ? project.source : null;
 };
+
+export const getProjectDeploymentLink = (key = 0) => {
+    const project = TextModel.projects[key];
+    return project.deploymentLink && project.deploymentLink !== null ? project.deploymentLink : null;
+}
 
 export const getProjectVideo = (key = 0) => {
     const project = TextModel.projects[key];

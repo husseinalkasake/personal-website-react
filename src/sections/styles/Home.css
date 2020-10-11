@@ -10,18 +10,45 @@
     height: 100vh;
     justify-content: center;
     background-image: linear-gradient(#00000040, #00000040),
-        url('../../images/hussein-wideshot-cropped.jpg');
+        url('../../images/background2.jpg');
 }
 
 .home-container p {
-    font-size: 3em;
+    font-size: 1.8em;
     color: #e2dfdf;
     font-weight: 580;
     font-family: 'TypoGraphica';
 }
 
 .home-container .subheader {
-    font-size: 2.5em;
+    font-size: 1.2em;
+}
+
+.home-container p.name {
+    font-size: 42px;
+    margin-bottom: 0;
+    font-family: 'GreatDay';
+}
+
+.home-container p.no-margin-bottom {
+    margin-bottom: 0;
+}
+
+.home-container .contact-container {
+    position: absolute;
+    bottom: 4em;
+    margin-left: 12px;
+}
+.home-container .contact-container p {
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'Montserrat';
+}
+
+.email-logo {
+    width: 2.2em;
+    height: 2.2em;
+    margin-bottom: -10px;
 }
 
 .text-container {
@@ -29,17 +56,16 @@
 }
 
 .down {
-    position: absolute;
     cursor: pointer;
-    bottom: 10%;
-    font-size: 4em;
-    margin-left: -24px;
+    font-size: 3em;
+    margin-right: -6px;
 }
 
 /* mobile */
 @media (max-width: 640px) {
     .home-container {
         flex-direction: column-reverse;
+        height: 88vh;
     }
 
     .down {

@@ -5,3 +5,11 @@
     justify-content: center;
     position: relative;
 }
+/* .experience-container .inner-container {
+    display: flex;
+    overflow-x: scroll;
+}
+
+.experience-container .inner-container::-webkit-scrollbar { 
+    display: none; 
+} */
