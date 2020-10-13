@@ -18,7 +18,7 @@ const TextModel = {
             date: 'January - April 2020',
             location: 'Toronto, Ontario, Canada',
             summary: [
-                'Heavily involved in the developement of a motion capture software solution using a .NET (WPF) frontend & Python backend',
+                'Heavily involved in the developement of a motion capture software solution using .NET (WPF) & Python for frontend and backend respectively',
                 'Took ownership of major full-stack features and participated in regular software architecture discussions and code reviews witin an agile setting',
                 'Quickly developed a facial motion capture solution (using a Python service and a WPF frontend) to meet sudden social distancing requirements',
                 'Wrote extensive Pytest backend and XUnit frontend unit and integration tests to ensure feature functionality throughout development'
@@ -97,10 +97,15 @@ const TextModel = {
                 'Provides users of all backgrounds with a customized home workout schedule (with videos for each workout) as well as a food plan with calorie count',
             ],
             moreInfo: [
-                'More Info'
+                'This project was created with a friend to meet the sudden demand of home solutions due to the quarantine times of the COVID-19 pandemic. After discussing with friends with medical studies backgrounds, we decided to create a cross-platform mobile application as a solution to provide customized home workout plans for users.',
+                'React Native was chosen given team familiarity with the solution as well as Redux and React Router in terms of libraries for state management and app navigation respectively.'
             ],
             source: 'https://github.com/husseinalkasake/backyarders',
-            deploymentLink: 'https://play.google.com/store/apps/details?id=com.backyarders.backyarders'
+            deploymentLink: 'https://play.google.com/store/apps/details?id=com.backyarders.backyarders',
+            video: {
+                web: true,
+                source: 'https://www.youtube.com/embed/cBDs3vc7h1c?autoplay=1&loop=1&mute=1&controls=0&playlist=cBDs3vc7h1c'
+            }
         },
         {
             title: 'Personal Website Backend',
@@ -139,7 +144,7 @@ const TextModel = {
         },
         {
             title: 'Personal Website',
-            subtitle: "probably where you're reading this right now :)",
+            subtitle: Array.from("probably where you're reading this right now &#128522;").join(""),
             date: '2018',
             summary: [
                 'Simple Personal Portfolio Website to highlight personal skills and experience',
@@ -285,7 +290,7 @@ const getText = (section, styles = {}, key = 0) => {
             const project = TextModel.projects[key];
             texts.push(<p style={styles}>{project.title}</p>);
             if (project.subtitle)
-                texts.push(<p style={styles}>{project.subtitle}</p>);
+                texts.push(<p style={styles}><span>{project.subtitle}</span></p>);
             list = [];
             project.summary.forEach(text => {
                 list.push(<li style={styles}>{text}</li>);
