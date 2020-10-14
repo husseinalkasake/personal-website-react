@@ -10,6 +10,7 @@ const ImageModel = {
     ],
     projects: [
         require('../images/backyarders-logo2.png'),
+        require('../images/s&r-robot.jpg'),
         require('../images/personal-website-backend-logo.png'),
         require('../images/endless-charts-logo.png'),
         require('../images/hussein-alkasake-logo.png'),

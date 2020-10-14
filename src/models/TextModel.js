@@ -3,12 +3,12 @@ import React from 'react';
 const TextModel = {
     about: {
         header:
-            'Software Developer and Mechatronics Engineering student at the University of Waterloo',
+            'Software Developer and 4th year Mechatronics Engineering student at the University of Waterloo - graduating April 2021 🙏',
         paragraph: [
-            "Since I was a kid, I've always had a passion for creating. I used to love scribbling random drawings everywhere I could and eventually would start drawing countless floor plans for random building ideas I'd have. And despite how awful all those drawings were in hindsight (definitely not the artist in the family), I loved making them and it fueled my creativity and interest in everything around me from a very young age. By the time I made it to middle and high school, I started gravitating towards how everything around me worked, especially all the technology I was using. This passion for technology people actually use on a daily basis lead me to Engineering.",
-            'While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey in software development, I was able to learn many different languages and technologies in my over 2 years of professional experience. For example, in my last position, I fully developed core features for an ecommerce web application using Typescript, Vue, Nuxt, GraphQL & NodeJS within a continuous deployment setting. I also previously worked on a utility billing web application using Vue all the way up to shipping it to users and incrementally improving it in an agile setting. In all my projects, I was heavily involved in the planning, development and deployment. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.',
-            'In most of my experience, I worked on hundreds of bugs and user stories while working within an Agile/Scrum environment and used TFS & Git to manage teamwork and source code accordingly. This showed me the importance of being actively involved in different aspects of the development process, from early design meetings to the very final sprints before deploying the project. In my last position especially, I was heavily involved by participating in biweekly sprint planning sessions, retrospectives, backlog grooming and bug bashes.',
-            "While I'm not working on work or side projects, I really enjoy working on my music production as it remains my main creative outlet nowadays. I make countless hip-hop/R&B/electronic beats as I always obsess over new synths, plug-ins and sounds I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever f ilms/albums that I might've missed during the year."
+            "Since I was a kid, I've always had a passion for creating. I used to love scribbling random drawings everywhere I could and eventually would start drawing countless floor plans for random building ideas I'd have. And despite how awful all those drawings were in hindsight (definitely not the artist in the family), I loved making them and it fueled my creativity and interest in everything around me from a very young age. By the time I made it to middle and high school, I started gravitating towards how everything around me worked, especially all the technology I was using. This passion for technology people use on a daily basis lead me to pursue Engineering.",
+            'While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey, I was able to learn many different languages and technologies in my over 2 years of professional experience. For example, in my last position, I was responsible of developing and iterating on core features of a motion capture solution with a WPF frontend and Python backend. Before that, I was involved in developing an ecommerce web application using Typescript, Vue, Nuxt, GraphQL & NodeJS within a continuous deployment setting. In all my projects, I was heavily involved in their planning, development and deployment processes. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.',
+            'In most of my experience, I worked on hundreds of bugs and user stories within an Agile/Scrum environment and used TFS & Git to manage teamwork and source code accordingly. This showed me the importance of being actively involved in different aspects of the development process, from early design meetings to the very final sprints before deploying the project. In my last position especially, I was heavily involved by participating in biweekly sprint planning sessions, retrospectives, backlog grooming and bug bashes.',
+            "While I'm not working on work or side projects, I really enjoy working on my music production as it remains my main creative outlet nowadays. I make countless hip-hop/R&B/electronic/latino beats as I always obsess over new synths, plug-ins and sounds/instruments I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever films/albums that I might've missed during the year."
         ]
     },
     experience: [
@@ -98,7 +98,7 @@ const TextModel = {
             ],
             moreInfo: [
                 'This project was created with a friend to meet the sudden demand of home solutions due to the quarantine times of the COVID-19 pandemic. After discussing with friends with medical studies backgrounds, we decided to create a cross-platform mobile application as a solution to provide customized home workout plans for users.',
-                'React Native was chosen given team familiarity with the solution as well as Redux and React Router in terms of libraries for state management and app navigation respectively.'
+                "React Native was chosen given team familiarity with the platform along with Redux and React Router for state management and app navigation respectively. The application consisted of collecting user information through an inital survey (with information available to edit later with a personal profile page) to customize the user's workout plan accordingly. The algorithm to customize workout plans were determined through research and consultation with friends with medical studies backgrounds who recorded videos of the different workouts to provide users with an easy to follow reference. A suggested food plan is also provided based on the user's information to provide a reference of what's expected to help the user achieve their goals. Due to time limitations, the team was not able to create a backend for the app and is something to be added in the future to ensure seperation of app logic down the line 🙏"
             ],
             source: 'https://github.com/husseinalkasake/backyarders',
             deploymentLink: 'https://play.google.com/store/apps/details?id=com.backyarders.backyarders',
@@ -108,8 +108,26 @@ const TextModel = {
             }
         },
         {
+            title: 'Autonomous Search and Rescue Robot',
+            date: '2020',
+            summary: [
+                'Designed, built and programmed an autonomous search and rescue robot able to traversal multiple types of terrain (sand, pebbles & holes)',
+                'Executed countless unit and integration tests (with and without robot and sensors) to ensure robot is able to traverse random variations of terrain as expected'
+            ],
+            moreInfo: [
+                'This project was a major 3rd year engineering project where every group was responsible for designing, building and iterating on an autonomous vehicle able to traverse random obstacles (sand, pebbles and holes) while following a specific path. The mechanical aspect of the design was very difficult and took many iterations and tests with different motor and chassis combinations before finalizing the design shown below. To overcome the changing terrain, big wheels and powerful motors were used in the design. The mechanical parts were created using laser cutting pieces and relying on a gear ratio to handle motor torque as needed.',
+                "From the software side, a C++ program was created to be used with an Arduino board connected to multiple sensors (2 light sensors and an IMU/angle sensor). Software design and development was done in parallel with the mechanical design with unit and integration tests with the sensors done before testing with the entire setup (connected to the robot and motors). Overall, the project was a sucess and the robot was able to finish the course with the obstacles as expected. The full demo of the robot can be seen below."
+            ],
+            source: 'https://github.com/husseinalkasake/autonomous-rescue-vehicle',
+            images: [require('../images/s&r-robot.jpg')],
+            video: {
+                web: true,
+                source: 'https://www.youtube.com/embed/VT_WfBGKOkA?mute=1'
+            }
+        },
+        {
             title: 'Personal Website Backend',
-            subtitle: 'Go GraphQL Backend for this website :)',
+            subtitle: 'Go GraphQL Backend for this website 😊',
             date: '2019',
             summary: [
                 'Backend developed for personal website using Go and PostgreSQL database',
@@ -144,7 +162,7 @@ const TextModel = {
         },
         {
             title: 'Personal Website',
-            subtitle: Array.from("probably where you're reading this right now &#128522;").join(""),
+            subtitle: "probably where you're reading this right now 😊",
             date: '2018',
             summary: [
                 'Simple Personal Portfolio Website to highlight personal skills and experience',
@@ -162,7 +180,6 @@ const TextModel = {
             date: '2018',
             summary: [
                 'Built a line following and magnet detecting robot using a programmable circuit board and motors',
-                'Soldered circuit components onto PCB following circuit schematics',
                 'Wrote and debugged magnet detecting and line following algorithms using C as well as configured sensors accordingly'
             ],
             moreInfo: [
@@ -188,9 +205,7 @@ const TextModel = {
             ],
             images: [
                 require('../images/truss-bridge-break.gif'),
-                require('../images/truss-bridge-progress.jpg'),
-                require('../images/truss-bridge-2.jpg'),
-                require('../images/truss-bridge-aftermath.jpg')
+                require('../images/truss-bridge-2.jpg')
             ],
             video: {
                 web: true,
@@ -239,8 +254,9 @@ const TextModel = {
                 {
                     subtitle: 'Relevant Projects',
                     summary: [
-                        'Built a basic task scheduling real-time operating system using C and RTOS course material',
-                        'Built and programmed a line following and magnet detecting robot using C and soldering skills',
+                        'Designed, built and programmed an autonomous multi-terrain search and rescue robot that follows a course with random obstacles',
+                        'Built a task scheduling real-time operating system using C and RTOS course material',
+                        'Built a line following and magnet detecting robot using C and soldering skills',
                         'Designed, tested and debugged line following and coin sorting robots using C++ to meet constraints and fulfill project goals',
                         'Designed and built a 3D Truss Bridge Design using stress and force analysis and AutoCAD skills'
                     ]

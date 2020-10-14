@@ -14,7 +14,7 @@ class Home extends Component {
                     <Links large={true} whiteLogo={true} />
                     <div className='contact-container'>
                         <p>
-                            always interested in new opportunites &#128522; &nbsp;
+                            always interested in new opportunites 😊 &nbsp;
                             <a target='_blank' rel='noopener noreferrer' href='mailto:husseinalkasake@gmail.com'>
                                 <img alt='' className='email-logo' src={require(`../../images/email-logo.png`)}/>
                             </a>
