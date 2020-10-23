@@ -1,6 +1,6 @@
 .about-container {
     display: flex;
-    margin: 2em 1em 1em 1em;
+    margin: 2em 0.5em 1em 1em;
     justify-content: center;
     align-content: center;
     font-family: 'Montserrat';
@@ -13,8 +13,16 @@
     padding: 0 1em 0 1em;
 }
 
-.about-container .mainImage {
-    border-radius: 4em;
+.about-container .image-container img {
+    border-radius: 2em;
+    top: 5em !important;
+    left: -6em !important;
+}
+
+@media (max-width: 992px) {
+    .about-container .image-container img {
+        left: 0em !important;
+    }
 }
 
 @media (max-width: 640px) {

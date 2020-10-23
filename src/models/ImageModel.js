@@ -1,5 +1,5 @@
 const ImageModel = {
-    about: require('../images/hussein-headshot.jpg'),
+    about: require('../images/about-me.jpg'),
     experience: [ 
         require('../images/ubisoft-logo2.png'),
         require('../images/hubba-logo.png'),
