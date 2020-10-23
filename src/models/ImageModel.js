@@ -1,6 +1,7 @@
 const ImageModel = {
-    about: require('../images/hussein-headshot.jpg'),
+    about: require('../images/about-me.jpg'),
     experience: [ 
+        require('../images/ubisoft-logo2.png'),
         require('../images/hubba-logo.png'),
         require('../images/globalive_logo.png'),
         require('../images/mhs-logo.png'),
@@ -8,6 +9,8 @@ const ImageModel = {
         require('../images/trans-plan-logo.png')
     ],
     projects: [
+        require('../images/backyarders-logo2.png'),
+        require('../images/s&r-robot.jpg'),
         require('../images/personal-website-backend-logo.png'),
         require('../images/endless-charts-logo.png'),
         require('../images/hussein-alkasake-logo.png'),

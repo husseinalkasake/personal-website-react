@@ -10,7 +10,8 @@ import {
     getProjectTitle,
     getProjectSource,
     getProjectVideo,
-    getProjectImages
+    getProjectImages,
+    getProjectDeploymentLink
 } from '../../models/TextModel';
 
 class SideViewComponent extends Component {
@@ -42,18 +43,18 @@ class SideViewComponent extends Component {
                             section='projectItem'
                             importKey={this.props.importKey}
                         />
-                        {this.sourceButton()}
+                        <div className='links'>{this.links()}</div>
                     </div>
                     {this.media()}
                 </div>
             );
         }
     }
-    sourceButton() {
-        const source = [];
+    links() {
+        const links = [];
         const projectSource = getProjectSource(this.props.importKey);
         if (projectSource !== null) {
-            source.push(
+            links.push(
                 <a
                     target='_blank'
                     rel='noopener noreferrer'
@@ -62,7 +63,18 @@ class SideViewComponent extends Component {
                 </a>
             );
         }
-        return source;
+        const projectDeploymentLink = getProjectDeploymentLink(this.props.importKey);
+        if (projectDeploymentLink !== null) {
+            links.push(
+                <a
+                    target='_blank'
+                    rel='noopener noreferrer'
+                    href={projectDeploymentLink}>
+                    <CustomButton text='View on Play Store' />
+                </a>
+            );
+        }
+        return links;
     }
     media() {
         const media = [];
@@ -104,7 +116,6 @@ class SideViewComponent extends Component {
                         height={window.innerHeight / 1.5}
                         src={projectVideo.source}
                         frameborder='0'
-                        allowfullscreen
                         allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture'></iframe>
                 );
             }

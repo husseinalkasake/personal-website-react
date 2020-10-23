@@ -3,15 +3,27 @@ import React from 'react';
 const TextModel = {
     about: {
         header:
-            'Software Developer and Mechatronics Engineering student at the University of Waterloo',
+            'Software Developer and 4th year Mechatronics Engineering student at the University of Waterloo - graduating April 2021 🙏',
         paragraph: [
-            "Since I was a kid, I've always had a passion for creating. I used to love scribbling random drawings everywhere I could and eventually would start drawing countless floor plans for random building ideas I'd have. And despite how awful all those drawings were in hindsight (definitely not the artist in the family), I loved making them and it fueled my creativity and interest in everything around me from a very young age. By the time I made it to middle and high school, I started gravitating towards how everything around me worked, especially all the technology I was using. This passion for technology people actually use on a daily basis lead me to Engineering.",
-            'While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey in software development, I was able to learn many different languages and technologies in my over 2 years of professional experience. For example, in my last position, I fully developed core features for an ecommerce web application using Typescript, Vue, Nuxt, GraphQL & NodeJS within a continuous deployment setting. I also previously worked on a utility billing web application using Vue all the way up to shipping it to users and incrementally improving it in an agile setting. In all my projects, I was heavily involved in the planning, development and deployment. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.',
-            'In most of my experience, I worked on hundreds of bugs and user stories while working within an Agile/Scrum environment and used TFS & Git to manage teamwork and source code accordingly. This showed me the importance of being actively involved in different aspects of the development process, from early design meetings to the very final sprints before deploying the project. In my last position especially, I was heavily involved by participating in biweekly sprint planning sessions, retrospectives, backlog grooming and bug bashes.',
-            "While I'm not working on work or side projects, I really enjoy working on my music production as it remains my main creative outlet nowadays. I make countless hip-hop/R&B/electronic beats as I always obsess over new synths, plug-ins and sounds I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever f ilms/albums that I might've missed during the year."
+            "Since I was a kid, I've always had a passion for creating. I used to love scribbling random drawings everywhere I could and eventually would start drawing countless floor plans for random building ideas I'd have. And despite how awful all those drawings were in hindsight (definitely not the artist in the family), I loved making them and it fueled my creativity and interest in everything around me from a very young age. By the time I made it to middle and high school, I started gravitating towards how everything around me worked, especially all the technology I was using. This passion for technology people use on a daily basis lead me to pursue Engineering.",
+            'While I do enjoy the hardware aspect of my program, I truly fell in love with the software side. So far in my journey, I was able to learn many different languages and technologies in my over 2 years of professional experience. For example, in my last position, I was responsible of developing and iterating on core features of a motion capture solution with a WPF frontend and Python backend. Before that, I was involved in developing an ecommerce web application using Typescript, Vue, Nuxt, GraphQL & NodeJS within a continuous deployment setting. In all my projects, I was heavily involved in their planning, development and deployment processes. This helped me gain a lot of insight into the importance of code maintainability and scalability to ensure functionality years down the line.',
+            'In most of my experience, I worked on hundreds of bugs and user stories within an Agile/Scrum environment and used TFS & Git to manage teamwork and source code accordingly. This showed me the importance of being actively involved in different aspects of the development process, from early design meetings to the very final sprints before deploying the project. In my last position especially, I was heavily involved by participating in biweekly sprint planning sessions, retrospectives, backlog grooming and bug bashes.',
+            "While I'm not working on work or side projects, I really enjoy working on my music production as it remains my main creative outlet nowadays. I make countless hip-hop/R&B/electronic/latino beats as I always obsess over new synths, plug-ins and sounds/instruments I can use and manipulate. I also enjoy catching up on whatever TV shows I'm currently watching and whatever films/albums that I might've missed during the year."
         ]
     },
     experience: [
+        {
+            organization: 'Ubisoft',
+            title: 'Software Developer',
+            date: 'January - April 2020',
+            location: 'Toronto, Ontario, Canada',
+            summary: [
+                'Heavily involved in the developement of a motion capture software solution using .NET (WPF) & Python for frontend and backend respectively',
+                'Took ownership of major full-stack features and participated in regular software architecture discussions and code reviews witin an agile setting',
+                'Quickly developed a facial motion capture solution (using a Python service and a WPF frontend) to meet sudden social distancing requirements',
+                'Wrote extensive Pytest backend and XUnit frontend unit and integration tests to ensure feature functionality throughout development'
+            ]
+        },
         {
             organization: 'Hubba',
             title: 'Software Developer',
@@ -77,8 +89,45 @@ const TextModel = {
     ],
     projects: [
         {
+            title: 'Backyarders',
+            subtitle: 'Home Workout Application',
+            date: '2020',
+            summary: [
+                'Cross-platform mobile application for iOS and Android built with React Native',
+                'Provides users of all backgrounds with a customized home workout schedule (with videos for each workout) as well as a food plan with calorie count',
+            ],
+            moreInfo: [
+                'This project was created with a friend to meet the sudden demand of home solutions due to the quarantine times of the COVID-19 pandemic. After discussing with friends with medical studies backgrounds, we decided to create a cross-platform mobile application as a solution to provide customized home workout plans for users.',
+                "React Native was chosen given team familiarity with the platform along with Redux and React Router for state management and app navigation respectively. The application consisted of collecting user information through an inital survey (with information available to edit later with a personal profile page) to customize the user's workout plan accordingly. The algorithm to customize workout plans were determined through research and consultation with friends with medical studies backgrounds who recorded videos of the different workouts to provide users with an easy to follow reference. A suggested food plan is also provided based on the user's information to provide a reference of what's expected to help the user achieve their goals. Due to time limitations, the team was not able to create a backend for the app and is something to be added in the future to ensure seperation of app logic down the line 🙏"
+            ],
+            source: 'https://github.com/husseinalkasake/backyarders',
+            deploymentLink: 'https://play.google.com/store/apps/details?id=com.backyarders.backyarders',
+            video: {
+                web: true,
+                source: 'https://www.youtube.com/embed/cBDs3vc7h1c?autoplay=1&loop=1&mute=1&controls=0&playlist=cBDs3vc7h1c'
+            }
+        },
+        {
+            title: 'Autonomous Search and Rescue Robot',
+            date: '2020',
+            summary: [
+                'Designed, built and programmed an autonomous search and rescue robot able to traversal multiple types of terrain (sand, pebbles & holes)',
+                'Executed countless unit and integration tests (with and without robot and sensors) to ensure robot is able to traverse random variations of terrain as expected'
+            ],
+            moreInfo: [
+                'This project was a major 3rd year engineering project where every group was responsible for designing, building and iterating on an autonomous vehicle able to traverse random obstacles (sand, pebbles and holes) while following a specific path. The mechanical aspect of the design was very difficult and took many iterations and tests with different motor and chassis combinations before finalizing the design shown below. To overcome the changing terrain, big wheels and powerful motors were used in the design. The mechanical parts were created using laser cutting pieces and relying on a gear ratio to handle motor torque as needed.',
+                "From the software side, a C++ program was created to be used with an Arduino board connected to multiple sensors (2 light sensors and an IMU/angle sensor). Software design and development was done in parallel with the mechanical design with unit and integration tests with the sensors done before testing with the entire setup (connected to the robot and motors). Overall, the project was a sucess and the robot was able to finish the course with the obstacles as expected. The full demo of the robot can be seen below."
+            ],
+            source: 'https://github.com/husseinalkasake/autonomous-rescue-vehicle',
+            images: [require('../images/s&r-robot.jpg')],
+            video: {
+                web: true,
+                source: 'https://www.youtube.com/embed/VT_WfBGKOkA?mute=1'
+            }
+        },
+        {
             title: 'Personal Website Backend',
-            subtitle: 'Go GraphQL Backend for this website :)',
+            subtitle: 'Go GraphQL Backend for this website 😊',
             date: '2019',
             summary: [
                 'Backend developed for personal website using Go and PostgreSQL database',
@@ -98,9 +147,7 @@ const TextModel = {
             date: '2019',
             summary: [
                 'Cross-platform mobile application currently building for Android using React Native',
-                'Supports the ability to search for albums, view details, choose favorites and create simple lists',
-                'Uses React Router for navigation and Axios for REST API calls; Last.fm API used to populate app data',
-                'Uses NativeBase library to ensure consistent, reusable front-end components as well as Redux for state management'
+                'Supports the ability to search for albums, view details, choose favorites and create simple lists'
             ],
             moreInfo: [
                 'The purpose of this project is to build a music album chart/list creating mobile application. The project is inspired by popular chart rendering tools such as Neverending Charts which allow users to create drag and drop charts of their favorite albums and movies. It is currently being built for Android and will allow users to search and favorite albums as well as adding them to their own shareable drag and drop lists.',
@@ -115,12 +162,11 @@ const TextModel = {
         },
         {
             title: 'Personal Website',
-            subtitle: "probably where you're reading this right now :)",
+            subtitle: "probably where you're reading this right now 😊",
             date: '2018',
             summary: [
                 'Simple Personal Portfolio Website to highlight personal skills and experience',
-                'Front-end based web app built using ReactJS to create clean, reusable components',
-                'Dynamically scale images and cards and use flexbox to ensure responsive design'
+                'Front-end based web app built using ReactJS to create clean, reusable components'
             ],
             moreInfo: [
                 'The purpose of the project was to create a simple portfolio showcasing my personal skills and experience gained throughout my career. Considering that the website would basically just display text and images, no backend felt like it was needed. I initially thought to use vanilla JS/HTML/CSS, but I eventually decided to go with using ReactJS for the frontend. While it can be argued that React is sort of overkill in this case due to the simplicity of the project, reusability is a big advantage to the component-based approach React takes which makes updating the website with recent experience very simple and ensures consistency throughout the application.',
@@ -133,10 +179,8 @@ const TextModel = {
             title: 'Magnet detecting line following robot',
             date: '2018',
             summary: [
-                'Built a line following and magnet detecting robot using programmable circuit board and motors',
-                'Soldered circuit components onto PCB following circuit schematics',
-                'Wrote and debugged magnet detecting and line following algorithms using C',
-                'Configured tolerances of magentic and light detecting sensors through rigorous testing'
+                'Built a line following and magnet detecting robot using a programmable circuit board and motors',
+                'Wrote and debugged magnet detecting and line following algorithms using C as well as configured sensors accordingly'
             ],
             moreInfo: [
                 'This project was a term long project for our 2nd year Circuits course that was done over 10 lab sessions. The project involved analyzing circuit schematics, writing and flashing C alogirthms and manually soldering components onto a programmable circuit board accordingly.',
@@ -153,9 +197,7 @@ const TextModel = {
             date: '2017',
             summary: [
                 'Designed and built 3D Truss Bridge using stress and force analysis as well as AutoCAD skills',
-                'Created and analyzed multiple bridge designs using force analysis and engineering skills',
-                'Designed all required pieces using AutoCAD; Created them using laser cutter',
-                'Tested multiple versions of design with loads; Analyzed failures to improve design'
+                'Created and analyzed multiple bridge designs using force analysis and engineering skills'
             ],
             moreInfo: [
                 'This project was for our 2nd year material design course where we had to design a truss bridge that can hold as many weights as possible before breaking. The bridge was designed using AutoCAD and built using laser cut wooden pieces. Force and stress analysis was used to predict and improve bridge designs as well as a couple of test runs with weights.',
@@ -163,9 +205,7 @@ const TextModel = {
             ],
             images: [
                 require('../images/truss-bridge-break.gif'),
-                require('../images/truss-bridge-progress.jpg'),
-                require('../images/truss-bridge-2.jpg'),
-                require('../images/truss-bridge-aftermath.jpg')
+                require('../images/truss-bridge-2.jpg')
             ],
             video: {
                 web: true,
@@ -177,8 +217,7 @@ const TextModel = {
             title: 'NXT Coin Sorter',
             date: '2016',
             summary: [
-                'Worked as a team to design, build and code a Coin Sorting robot using a Lego Mindstorm kit',
-                'Build the mechanical design to turn circular motion of a motor to linear motion, pushing each coin towards a touch sensor to measure their diameters',
+                'Worked within a team to design, build and code (using C++) a Coin Sorting robot using a Lego Mindstorm kit',
                 'Completed, tested and debugged the C++ code to operate the mechanical system efficiently'
             ],
             moreInfo: [
@@ -215,8 +254,9 @@ const TextModel = {
                 {
                     subtitle: 'Relevant Projects',
                     summary: [
-                        'Built a basic task scheduling real-time operating system using C and RTOS course material',
-                        'Built and programmed a line following and magnet detecting robot using C and soldering skills',
+                        'Designed, built and programmed an autonomous multi-terrain search and rescue robot that follows a course with random obstacles',
+                        'Built a task scheduling real-time operating system using C and RTOS course material',
+                        'Built a line following and magnet detecting robot using C and soldering skills',
                         'Designed, tested and debugged line following and coin sorting robots using C++ to meet constraints and fulfill project goals',
                         'Designed and built a 3D Truss Bridge Design using stress and force analysis and AutoCAD skills'
                     ]
@@ -266,7 +306,7 @@ const getText = (section, styles = {}, key = 0) => {
             const project = TextModel.projects[key];
             texts.push(<p style={styles}>{project.title}</p>);
             if (project.subtitle)
-                texts.push(<p style={styles}>{project.subtitle}</p>);
+                texts.push(<p style={styles}><span>{project.subtitle}</span></p>);
             list = [];
             project.summary.forEach(text => {
                 list.push(<li style={styles}>{text}</li>);
@@ -333,6 +373,11 @@ export const getProjectSource = (key = 0) => {
     const project = TextModel.projects[key];
     return project.source && project.source !== null ? project.source : null;
 };
+
+export const getProjectDeploymentLink = (key = 0) => {
+    const project = TextModel.projects[key];
+    return project.deploymentLink && project.deploymentLink !== null ? project.deploymentLink : null;
+}
 
 export const getProjectVideo = (key = 0) => {
     const project = TextModel.projects[key];

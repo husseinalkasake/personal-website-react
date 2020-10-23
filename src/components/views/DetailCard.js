@@ -4,9 +4,7 @@ import '../styles/DetailCard.css';
 import Text from '../views/Text';
 import CustomButton from '../views/CustomButton';
 import getImage from '../../models/ImageModel';
-import { getProjectDate } from '../../models/TextModel';
-import { getProjectSource } from '../../models/TextModel';
-import { projectHasMoreInfo } from '../../models/TextModel';
+import { getProjectDate, getProjectSource, getProjectDeploymentLink, projectHasMoreInfo } from '../../models/TextModel';
 import { connect } from 'react-redux';
 import { updateMoreInfoKey } from '../../redux/actions';
 
@@ -38,6 +36,17 @@ class DetailCardComponent extends Component {
                         rel='noopener noreferrer'
                         href={projectSource}>
                         <CustomButton text='View on Github' />
+                    </a>
+                );
+            }
+            const projectDeploymentLink = getProjectDeploymentLink(this.props.importKey);
+            if (projectDeploymentLink !== null) {
+                moreInfo.push(
+                    <a
+                        target='_blank'
+                        rel='noopener noreferrer'
+                        href={projectDeploymentLink}>
+                        <CustomButton text='View on Play Store' />
                     </a>
                 );
             }
