@@ -15,7 +15,7 @@ const TextModel = {
         {
             organization: 'Ubisoft',
             title: 'Software Developer',
-            date: 'January - April 2020',
+            date: 'May - August 2020',
             location: 'Toronto, Ontario, Canada',
             summary: [
                 'Heavily involved in the developement of a motion capture software solution using .NET (WPF) & Python for frontend and backend respectively',
