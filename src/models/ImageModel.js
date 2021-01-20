@@ -9,6 +9,7 @@ const ImageModel = {
         require('../images/trans-plan-logo.png')
     ],
     projects: [
+        require('../images/lobster-logo.png'),
         require('../images/backyarders-logo2.png'),
         require('../images/s&r-robot.jpg'),
         require('../images/personal-website-backend-logo.png'),

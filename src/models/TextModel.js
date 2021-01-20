@@ -89,6 +89,20 @@ const TextModel = {
     ],
     projects: [
         {
+            title: 'Lobster',
+            subtitle: 'Work Posture Tracking Application',
+            workInProgress: true,
+            date: '2021',
+            summary: [
+                'Work posture tracking software solution with React Native mobile app and Python backend',
+                "Tracks user's home-office work session posture and provides users with real-time status and suggestions as well as overall statistics"
+            ],
+            moreInfo: [
+                'This project was started for the final year engineering project and is a complete solution to track and help adjust home-office posture. The solution consists of a front-end cross-platform mobile app built with React Native, a Python backend and an embedded hardware component. The hardware component consists of a desk connected to a motor to move up and down as well as an Arduino board to communicate with the mobile app.',
+                'The solution functions with users on the mobile app initiating a new work session and letting their phone camera take pictures of their posture every 10-30 seconds. These pictures are directly sent to the backend where they are processed by image processing algorithms to detect the posture of the user and their deviation from perfect posture. The differences are used to send back scores and suggestions for the app to display to the user throughout their work session. The user can also view overall statistics of their posture progress over time and move the companion desk up or down if desired. The app can also recommend switching between sitting and standing work positions if consistent bad performance is detected.'
+            ]
+        },
+        {
             title: 'Backyarders',
             subtitle: 'Home Workout Application',
             date: '2020',
