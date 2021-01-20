@@ -95,7 +95,7 @@ const TextModel = {
             date: '2021',
             summary: [
                 'Work posture tracking software solution with React Native mobile app and Python backend',
-                "Tracks user's home-office work session posture and provides users with real-time status and suggestions as well as overall statistics"
+                "Tracks user's home-office work session posture and provides them with real-time suggestions as well as overall statistics"
             ],
             moreInfo: [
                 'This project was started for the final year engineering project and is a complete solution to track and help adjust home-office posture. The solution consists of a front-end cross-platform mobile app built with React Native, a Python backend and an embedded hardware component. The hardware component consists of a desk connected to a motor to move up and down as well as an Arduino board to communicate with the mobile app.',
